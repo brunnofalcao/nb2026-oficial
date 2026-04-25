@@ -207,10 +207,8 @@ button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-co
 .ftr-leg{margin-top:32px;font-size:var(--ov);color:var(--t3);opacity:.5}
 
 /* ═══ PAGES — Smooth Transitions ═══ */
-.pg{display:none;opacity:0;transform:translateY(8px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.pg{display:none}
 .pg.on{display:block}
-.pg.vis{opacity:1;transform:translateY(0)}
-.pg.out{opacity:0;transform:translateY(-8px)}
 
 /* Progress bar (BH page) */
 .progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--cta),var(--accent));z-index:101;transition:width .1s linear;border-radius:0 2px 2px 0;display:none}
@@ -468,10 +466,10 @@ details[open] summary::after{content:'−'}
 <div class="pg" id="pg-ingressos">
 <div class="pg-hdr"><span class="sec-ey">Nutrição Brasil · Brasília · 2026</span><h1>Escolha seu módulo</h1><p class="sec-d" style="margin-top:8px">Centro de Convenções Ulysses · 27 a 30 de agosto</p></div>
 <div class="mods">
-<div class="mod top reveal"><div class="rec">★ MAIS VENDIDO</div><div class="mod-row"><div><h3>Nutrição Brasil</h3><div class="sub">Plenária Principal · 27 a 29/08</div></div><div><div class="val">R$ 397</div><div class="inst">ou 12x de R$ 40,97</div></div></div><div class="mod-tags"><span class="mod-tag">✓ 3 dias</span><span class="mod-tag">✓ +100 palestras</span><span class="mod-tag">✓ Plenária</span><span class="mod-tag">✓ Certificado</span><span class="mod-tag">✓ Expo + Bag</span></div><a class="mod-btn fill" href="https://pay.hotmart.com/P104530692Q?checkoutMode=10" target="_blank">Comprar agora</a></div>
-<div class="mod reveal"><div class="mod-row"><div><h3>MedBrasil</h3><div class="sub">Aud. Águas Claras · 29/08</div></div><div><div class="val">R$ 297</div><div class="inst">12x R$ 30,65</div></div></div><div class="mod-tags"><span class="mod-tag">✓ Módulo médico</span><span class="mod-tag">✓ Endocrinologia</span><span class="mod-tag">✓ Certificado</span></div><a class="mod-btn dim" href="https://pay.hotmart.com/X104531896U?checkoutMode=10" target="_blank">Comprar agora</a></div>
-<div class="mod reveal"><div class="mod-row"><div><h3>Nutrição Esportiva</h3><div class="sub">Aud. Alvorada · 28/08</div></div><div><div class="val">R$ 197</div><div class="inst">12x R$ 20,33</div></div></div><div class="mod-tags"><span class="mod-tag">✓ 1 dia esportiva</span><span class="mod-tag">✓ Performance</span><span class="mod-tag">✓ Certificado</span></div><a class="mod-btn dim" href="https://pay.hotmart.com/A104530612B?checkoutMode=10" target="_blank">Comprar agora</a></div>
-<div class="mod reveal"><div class="mod-row"><div><h3>Congresso Corrida</h3><div class="sub">Aud. Alvorada · 29/08</div></div><div><div class="val">R$ 147</div><div class="inst">12x R$ 15,17</div></div></div><div class="mod-tags"><span class="mod-tag">✓ Ciência da corrida</span><span class="mod-tag">✓ Nutrição atletas</span><span class="mod-tag">✓ Certificado</span></div><a class="mod-btn dim" href="https://pay.hotmart.com/W104530405N?checkoutMode=10" target="_blank">Comprar agora</a></div>
+<div class="mod top reveal"><div class="rec">★ MAIS VENDIDO</div><div class="mod-row"><div><h3>Nutrição Brasil</h3><div class="sub">Plenária Principal · 27 a 29/08</div></div><div><div class="val">R$ 397</div><div class="inst">ou 12x de R$ 40,97</div></div></div><div class="mod-tags"><span class="mod-tag">✓ 3 dias</span><span class="mod-tag">✓ +100 palestras</span><span class="mod-tag">✓ Plenária</span><span class="mod-tag">✓ Certificado</span><span class="mod-tag">✓ Expo + Bag</span></div><p style="font-size:var(--cap);color:var(--t3);margin-top:12px;line-height:1.6"><span style="color:var(--t2);font-weight:600">Confirmados:</span> Andréia Friques, Andréia Naves, Ana Paula Pujol, Bruna Pitaluga, Brunna Boaventura, Brunno Falcão, Cristiano Nader, Denise Carreiro, Denise de Carvalho, Henrique Freire, Karina Al Assal, Lorena Tomazett, Luiz Moreira, Luisa Wolpe, Murilo Pereira, Rita Castro, Samira Lima, Roberta Carbonari, Vânia Mattoso</p><a class="mod-btn fill" href="https://pay.hotmart.com/P104530692Q?checkoutMode=10" target="_blank">Comprar agora</a></div>
+<div class="mod reveal"><div class="mod-row"><div><h3>MedBrasil</h3><div class="sub">Aud. Águas Claras · 29/08</div></div><div><div class="val">R$ 297</div><div class="inst">12x R$ 30,65</div></div></div><div class="mod-tags"><span class="mod-tag">✓ Módulo médico</span><span class="mod-tag">✓ Endocrinologia</span><span class="mod-tag">✓ Certificado</span></div><p style="font-size:var(--cap);color:var(--t3);margin-top:12px;line-height:1.6"><span style="color:var(--t2);font-weight:600">Confirmados:</span> Dr. Bruno Cesar, Dra. Carine Petry, Dra. Denise de Carvalho, Dr. Francisco Tostes, Dr. Thiago Cabral, Dr. Thiago Castro e outros</p><a class="mod-btn dim" href="https://pay.hotmart.com/X104531896U?checkoutMode=10" target="_blank">Comprar agora</a></div>
+<div class="mod reveal"><div class="mod-row"><div><h3>Nutrição Esportiva</h3><div class="sub">Aud. Alvorada · 28/08</div></div><div><div class="val">R$ 197</div><div class="inst">12x R$ 20,33</div></div></div><div class="mod-tags"><span class="mod-tag">✓ 1 dia esportiva</span><span class="mod-tag">✓ Performance</span><span class="mod-tag">✓ Certificado</span></div><p style="font-size:var(--cap);color:var(--t3);margin-top:12px;line-height:1.6"><span style="color:var(--t2);font-weight:600">Confirmados:</span> Aline David, André Eluan, Andréia Naves, Giselle Santos, Karen Guimarães, Leticia Azen, Omar de Faria e outros</p><a class="mod-btn dim" href="https://pay.hotmart.com/A104530612B?checkoutMode=10" target="_blank">Comprar agora</a></div>
+<div class="mod reveal"><div class="mod-row"><div><h3>Congresso Corrida</h3><div class="sub">Aud. Alvorada · 29/08</div></div><div><div class="val">R$ 147</div><div class="inst">12x R$ 15,17</div></div></div><div class="mod-tags"><span class="mod-tag">✓ Ciência da corrida</span><span class="mod-tag">✓ Nutrição atletas</span><span class="mod-tag">✓ Certificado</span></div><p style="font-size:var(--cap);color:var(--t3);margin-top:12px;line-height:1.6"><span style="color:var(--t2);font-weight:600">Confirmados:</span> Karen Guimarães, Maria Matos, Letycia Nogueira e outros</p><a class="mod-btn dim" href="https://pay.hotmart.com/W104530405N?checkoutMode=10" target="_blank">Comprar agora</a></div>
 </div>
 <div style="max-width:720px;margin:12px auto 0;padding:0 20px"><div style="background:linear-gradient(135deg,rgba(212,170,92,.06),rgba(123,94,167,.08));border:1px solid var(--gold-s);border-radius:20px;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px" class="reveal"><div><span style="font-size:var(--ov);color:var(--gold);font-weight:700">★ GOLDEN EXPERIENCE</span><h3 style="font-family:var(--fd);font-size:var(--h3);font-weight:800;color:var(--t1);margin-top:4px">All Inclusive</h3><p style="font-size:var(--bs);color:var(--t2);margin-top:4px">Imersão + Plenárias + Lounge + Corrida VIP + Gravação</p></div><a class="btn btn-gold btn-md" href="https://pay.hotmart.com/X104531615W" target="_blank">Ver Golden</a></div></div>
 <div class="faq"><h2>Perguntas frequentes</h2><details><summary>Quem pode participar?</summary><div class="ans">Profissionais da saúde, estudantes e interessados em atualização científica.</div></details><details><summary>Desconto para estudante?</summary><div class="ans">Sim. Descontos disponíveis conforme o módulo.</div></details><details><summary>O evento é presencial?</summary><div class="ans">Sim. Presencial em Brasília. Golden inclui gravação vitalícia.</div></details><details><summary>Posso cancelar ou transferir?</summary><div class="ans">Sim, conforme regras da Hotmart informadas na compra.</div></details></div>
@@ -532,7 +530,7 @@ details[open] summary::after{content:'−'}
 <div class="spk reveal"><div class="spk-av">M</div><div class="spk-nm">Dra. Marcella Garcez</div><div class="spk-role">Médica</div></div>
 <div class="spk reveal"><div class="spk-av">R</div><div class="spk-nm">Dra. Roberta Carbonari</div><div class="spk-role">Nutricionista</div></div>
 <div class="spk reveal"><div class="spk-av">M</div><div class="spk-nm">Dra. Marianne Fazzi</div><div class="spk-role">Nutricionista</div></div>
-<div class="spk reveal"><div class="spk-av">T</div><div class="spk-nm">Dra. Thaisa Leal</div><div class="spk-role">Nutricionista</div></div>
+<div class="spk reveal"><div class="spk-av">T</div><div class="spk-nm">Thaisa Leal</div><div class="spk-role">Empresária</div></div>
 <div class="spk reveal"><div class="spk-av">B</div><div class="spk-nm">Brunno Falcão</div><div class="spk-role">CEO Science Play</div></div>
 </div>
 </section>
@@ -602,9 +600,9 @@ details[open] summary::after{content:'−'}
 <div style="display:flex;align-items:center;gap:12px"><span class="sblk-count">3 momentos</span><span class="sblk-chev">▼</span></div>
 </div>
 <div class="sblk-body">
-<div class="si"><span class="si-time">18h40</span><div class="si-info"><div class="si-speaker">Dra. Thaisa Leal</div><div class="si-topic">Tema a confirmar</div></div></div>
+<div class="si"><span class="si-time">18h40</span><div class="si-info"><div class="si-speaker">Thaisa Leal</div><div class="si-topic">Como construir uma comunidade na internet e transformar isso em produtos escaláveis</div></div></div>
 <div class="si"><span class="si-time">19h30</span><div class="si-info"><div class="si-speaker">Convidado especial</div><div class="si-topic">Palestra especial</div></div></div>
-<div class="si"><span class="si-time">20h20</span><div class="si-info"><div class="si-speaker">Brunno Falcão + convidados</div><div class="si-topic">Talk Integrativo — Encerramento</div></div></div>
+<div class="si"><span class="si-time">20h20</span><div class="si-info"><div class="si-speaker">Brunno Falcão</div><div class="si-topic">A nova audiência</div></div></div>
 </div>
 </div>
 
@@ -849,7 +847,7 @@ details[open] summary::after{content:'−'}
 </div>
 
 <!-- FOOTER -->
-<footer class="ftr"><img class="ftr-logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"><p>O evento que lidera a discussão sobre metabolismo, mente, músculo e o futuro da saúde no Brasil.</p><div class="ftr-links"><a href="#" onclick="go('home');return false">Início</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a></div><div class="ftr-leg"><img class="sp-logo" src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play"><br>Science Play Cursos LTDA · CNPJ 33.612.911/0001-29</div></footer>
+<footer class="ftr"><img class="ftr-logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"><p>O evento que lidera a discussão sobre metabolismo, mente, músculo e o futuro da saúde no Brasil.</p><div class="ftr-links"><a href="#" onclick="go('home');return false">Início</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a></div><div class="ftr-leg"><img class="sp-logo" src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play"><br>Science Play Cursos LTDA · CNPJ 33.612.911/0001-29</div></footer>
 
 <!-- WHATSAPP + DOCK + PROGRESS -->
 <div class="progress-bar" id="progBar"></div>
@@ -860,33 +858,22 @@ details[open] summary::after{content:'−'}
 /* ═══ SMOOTH PAGE TRANSITIONS ═══ */
 let currentPage='home';
 function go(id){
-  if(id===currentPage){closeS();return}
-  const oldEl=document.getElementById('pg-'+currentPage);
-  const newEl=document.getElementById('pg-'+id);
-  if(!newEl)return;
   closeS();
-  // Fade out
-  if(oldEl){oldEl.classList.remove('vis');oldEl.classList.add('out')}
-  setTimeout(()=>{
-    document.querySelectorAll('.pg').forEach(p=>{p.classList.remove('on','vis','out')});
-    window.scrollTo(0,0);
-    newEl.classList.add('on');
-    // Force reflow then fade in
-    void newEl.offsetHeight;
-    requestAnimationFrame(()=>{newEl.classList.add('vis')});
-    currentPage=id;
-    // Update nav
-    document.querySelectorAll('.nav-d a:not(.hdr-btn)').forEach(a=>a.classList.remove('on'));
-    const n=document.getElementById('n-'+id);if(n)n.classList.add('on');
-    // Re-init reveals
-    setTimeout(initReveal,150);
-    // Progress bar
-    document.getElementById('progBar').classList.toggle('active',id==='bh');
-    // Counter animation
-    if(id==='home')setTimeout(animateCounters,300);
-    // Init accordions
-    if(id==='bh')setTimeout(initAccordions,100);
-  },250);
+  var pages=document.querySelectorAll('.pg');
+  for(var i=0;i<pages.length;i++){pages[i].classList.remove('on')}
+  var el=document.getElementById('pg-'+id);
+  if(el){el.classList.add('on')}
+  window.scrollTo(0,0);
+  currentPage=id;
+  var links=document.querySelectorAll('.nav-d a:not(.hdr-btn)');
+  for(var j=0;j<links.length;j++){links[j].classList.remove('on')}
+  var n=document.getElementById('n-'+id);
+  if(n){n.classList.add('on')}
+  setTimeout(initReveal,100);
+  if(id==='bh'){setTimeout(initAccordions,100)}
+  if(id==='home'){setTimeout(animateCounters,300)}
+  var pb=document.getElementById('progBar');
+  if(pb){if(id==='bh'){pb.classList.add('active')}else{pb.classList.remove('active')}}
 }
 
 /* ═══ SHEET ═══ */
@@ -993,10 +980,8 @@ cd('2026-05-16T09:00:00','cd-bh');
 /* ═══ INIT ═══ */
 document.getElementById('n-home').classList.add('on');
 initReveal();
-// Force white on CTA button
-document.querySelectorAll('.hdr-btn').forEach(b=>{b.style.cssText+='color:#fff!important'});
-// Show home page
-requestAnimationFrame(()=>{document.getElementById('pg-home').classList.add('vis')});
+var btns=document.querySelectorAll('.hdr-btn');
+for(var i=0;i<btns.length;i++){btns[i].style.color='#fff'}
 // Animate counters when metrics are visible
 const metricsObs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){animateCounters();metricsObs.unobserve(e.target)}})},{threshold:.5});
 const metricsEl=document.querySelector('.metrics');
