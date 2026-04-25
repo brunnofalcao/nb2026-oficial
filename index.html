@@ -11,8 +11,8 @@
 <style>
 :root{--bg:#080014;--bg2:#0F0822;--bg3:#160E2C;--bg4:#1C1236;--glass:rgba(22,14,44,.65);--purple:#7B5EA7;--accent:#56CCF2;--accent-m:rgba(86,204,242,.12);--accent-s:rgba(86,204,242,.25);--cta:#4DAE7C;--cta-h:#5DC08E;--cta-m:rgba(77,174,124,.12);--gold:#D4AA5C;--gold-m:rgba(212,170,92,.12);--gold-s:rgba(212,170,92,.25);--nude:#D4A98C;--t1:#F0ECF7;--t2:#A99BC4;--t3:#7A6B96;--bdr:rgba(255,255,255,.06);--bdr2:rgba(255,255,255,.12);--sep:rgba(255,255,255,.04);--fd:'Outfit',sans-serif;--fb:'Inter',sans-serif;--hero:clamp(2.25rem,7vw,3.5rem);--h1:clamp(1.75rem,5vw,2.5rem);--h2:clamp(1.375rem,4vw,1.875rem);--h3:clamp(1.125rem,3vw,1.375rem);--b:0.9375rem;--bs:.8125rem;--cap:.75rem;--ov:.6875rem;--ease:cubic-bezier(.22,1,.36,1);--spring:cubic-bezier(.34,1.56,.64,1)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;background:#080014}
-body{background:#080014;color:var(--t1);font-family:var(--fb);font-size:var(--b);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t1);font-family:var(--fb);font-size:var(--b);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-color:transparent}
 ::selection{background:var(--purple);color:#fff}
@@ -108,7 +108,7 @@ button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-co
 .metric-l{font-size:var(--ov);color:var(--t3);margin-top:2px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
 
 /* ═══ SECTIONS ═══ */
-.sec{padding:64px 20px;background:#080014}
+.sec{padding:64px 20px}
 .sec-ey{font-size:var(--ov);font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;text-align:center;display:block;margin-bottom:8px}
 .sec-h{font-family:var(--fd);font-size:var(--h1);font-weight:800;color:var(--t1);text-align:center;letter-spacing:-.02em;line-height:1.15}
 .sec-d{font-size:var(--b);color:var(--t2);text-align:center;margin-top:8px;max-width:520px;margin-left:auto;margin-right:auto}
@@ -199,7 +199,7 @@ button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-co
 @media(min-width:768px){.dock{display:none}}
 
 /* ═══ FOOTER ═══ */
-.ftr{border-top:1px solid var(--sep);padding:48px 20px 96px;text-align:center;max-width:600px;margin:0 auto;background:#080014}
+.ftr{border-top:1px solid var(--sep);padding:48px 20px 96px;text-align:center;max-width:600px;margin:0 auto}
 .ftr-logo{font-family:var(--fd);font-weight:800;font-size:1.125rem;color:var(--t1);margin-bottom:12px}.ftr-logo b{color:var(--accent)}
 .ftr p{font-size:var(--bs);color:var(--t3);line-height:1.6}
 .ftr-links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:24px}
@@ -207,7 +207,7 @@ button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-co
 .ftr-leg{margin-top:32px;font-size:var(--ov);color:var(--t3);opacity:.5}
 
 /* ═══ PAGES — Smooth Transitions ═══ */
-.pg{display:none;opacity:0;transform:translateY(8px);transition:opacity .35s var(--ease),transform .35s var(--ease);background:#080014}
+.pg{display:none;opacity:0;transform:translateY(8px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
 .pg.on{display:block}
 .pg.vis{opacity:1;transform:translateY(0)}
 .pg.out{opacity:0;transform:translateY(-8px)}
@@ -219,7 +219,7 @@ button{cursor:pointer;border:none;font-family:var(--fb);-webkit-tap-highlight-co
 /* Smart header hide/show */
 .hdr.hidden{transform:translateY(-100%)}
 .hdr{transition:all .3s var(--ease),transform .35s var(--ease)}
-.pg-hdr{padding:80px 20px 32px;text-align:center;background:#080014}
+.pg-hdr{padding:80px 20px 32px;text-align:center}
 @media(min-width:768px){.pg-hdr{padding:120px 20px 32px}}
 .pg-hdr h1{font-family:var(--fd);font-size:var(--h1);font-weight:800;color:var(--t1);letter-spacing:-.02em}
 
@@ -270,9 +270,12 @@ details[open] summary::after{content:'−'}
 .cit-act{margin-top:12px;font-size:var(--bs);font-weight:600}
 
 /* ═══ BH PAGE — FULL SALES ═══ */
-.bh-hero{padding:72px 20px 40px;text-align:center;background:#080014;position:relative}
-@media(min-width:768px){.bh-hero{padding:96px 20px 48px}}
-.bh-hero .bh-pill{animation:fadeUp .6s var(--ease) both}
+.bh-hero{padding:80px 20px 40px;text-align:center;background:radial-gradient(60% 40% at 50% 10%,rgba(123,94,167,.15) 0%,transparent 100%);position:relative;overflow:hidden}
+@media(min-width:768px){.bh-hero{padding:100px 20px 48px;min-height:0;max-height:none}}
+.bh-orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.12;animation:float 5s ease-in-out infinite}
+.bh-orb-1{width:200px;height:200px;background:var(--purple);top:40px;right:-40px}
+.bh-orb-2{width:150px;height:150px;background:var(--accent);bottom:0;left:-30px;animation-delay:2s}
+.bh-hero>*{position:relative;z-index:1}
 .bh-pill{display:inline-block;background:var(--gold-m);border:1px solid var(--gold-s);border-radius:100px;padding:4px 16px;font-size:var(--cap);color:var(--gold);font-weight:600;margin-bottom:16px;animation:fadeUp .6s var(--ease) both}
 .bh-hero h1{font-family:var(--fd);font-size:var(--h1);font-weight:800;color:var(--t1);letter-spacing:-.02em;animation:fadeUp .6s .1s var(--ease) both}
 .bh-hero .bl{color:var(--accent)}
@@ -395,7 +398,7 @@ details[open] summary::after{content:'−'}
 .hon-ct{font-size:var(--cap);color:var(--t3);margin-top:2px}
 
 /* ═══ RUN PAGE ═══ */
-.run-hero{padding:80px 20px 48px;text-align:center;position:relative;overflow:hidden;background:#080014}
+.run-hero{padding:80px 20px 48px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(60% 50% at 50% 10%,rgba(86,204,242,.12) 0%,transparent 100%),radial-gradient(40% 40% at 80% 80%,rgba(77,174,124,.08) 0%,transparent 100%)}
 @media(min-width:768px){.run-hero{padding:100px 20px 56px}}
 .run-hero h1{font-family:var(--fd);font-size:var(--h1);font-weight:800;color:var(--t1);letter-spacing:-.02em}
 .run-hero .bl{color:var(--accent)}
@@ -443,12 +446,11 @@ details[open] summary::after{content:'−'}
 .run-price-discount p{font-size:var(--cap);color:var(--t2);margin:0}
 </style>
 </head>
-<body style="background:#080014">
-<div id="app" style="background:#080014;min-height:100vh">
+<body>
 
 <!-- HEADER -->
-<header class="hdr" id="hdr"><div class="hdr-in"><div class="logo" onclick="go('home')"><img class="logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"></div><nav class="nav-d"><a href="#" onclick="go('home');return false" id="n-home">Início</a><a href="#" onclick="go('cidades');return false" id="n-cidades">Cidades</a><a href="#" onclick="go('corrida');return false" id="n-corrida">Corrida</a><a href="#" onclick="go('programacao');return false" id="n-programacao">Programação</a><a href="#" onclick="go('hall');return false" id="n-hall">Homenageados</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a class="hdr-btn" href="#" onclick="go('ingressos');return false" style="color:#fff!important">Inscreva-se</a></nav><button class="menu-btn" onclick="openS()" aria-label="Menu">☰</button></div></header>
-<div class="sheet" id="sheet" onclick="closeS()"><div class="sheet-ov"></div><div class="sheet-p" onclick="event.stopPropagation()"><div class="sheet-h"></div><a href="#" onclick="go('home');return false">Início</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a class="btn-s" href="#" onclick="go('ingressos');return false">Inscreva-se</a></div></div>
+<header class="hdr" id="hdr"><div class="hdr-in"><div class="logo" onclick="go('home')"><img class="logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"></div><nav class="nav-d"><a href="#" onclick="go('home');return false" id="n-home">Início</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('cidades');return false" id="n-cidades">Cidades</a><a href="#" onclick="go('corrida');return false" id="n-corrida">Corrida</a><a href="#" onclick="go('programacao');return false" id="n-programacao">Programação</a><a href="#" onclick="go('hall');return false" id="n-hall">Homenageados</a><a class="hdr-btn" href="#" onclick="go('ingressos');return false" style="color:#fff!important">Inscreva-se</a></nav><button class="menu-btn" onclick="openS()" aria-label="Menu">☰</button></div></header>
+<div class="sheet" id="sheet" onclick="closeS()"><div class="sheet-ov"></div><div class="sheet-p" onclick="event.stopPropagation()"><div class="sheet-h"></div><a href="#" onclick="go('home');return false">Início</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a><a class="btn-s" href="#" onclick="go('ingressos');return false">Inscreva-se</a></div></div>
 
 <!-- ══════ HOME ══════ -->
 <div class="pg on" id="pg-home">
@@ -459,7 +461,8 @@ details[open] summary::after{content:'−'}
 <section class="pr-sec"><div class="reveal" style="text-align:center"><h2 class="sec-h">Escolha sua experiência</h2><p class="sec-d">Brasília (27–29 Ago) ou Imersões regionais</p></div><div class="pr-g"><div class="pr-c feat reveal reveal-scale"><h3>Brasília – DF</h3><div class="meta">27 a 29 de agosto · Ulysses</div><div class="pr-amt">R$ 147 <small>a partir de</small></div><div class="fl"><div class="fi"><span class="ck">✓</span>Congresso · 4 plenárias</div><div class="fi"><span class="ck">✓</span>+100 palestras</div><div class="fi"><span class="ck">✓</span>Exposição · 50+ marcas</div><div class="fi"><span class="ck">✓</span>Homenagem Dia do Nutricionista</div><div class="fi"><span class="ck">✓</span>Corrida 5K/10K</div></div><a class="cb fill" href="#" onclick="go('ingressos');return false">Ver ingressos</a></div><div class="pr-c reveal reveal-scale" style="transition-delay:.15s"><h3>Imersões Regionais</h3><div class="meta">Experiências de 1 dia</div><div class="pr-amt">R$ 497 <small>a partir de</small></div><div style="margin-top:16px"><div class="cr"><span class="nm">Belo Horizonte</span><span class="dt hot">16 de maio</span></div><div class="cr"><span class="nm">Belém</span><span class="dt">Setembro</span></div><div class="cr"><span class="nm">Goiânia</span><span class="dt">7 de novembro</span></div><div class="cr"><span class="nm">Porto Alegre</span><span class="dt">14 de novembro</span></div></div><a class="cb out" href="#" onclick="go('cidades');return false">Ver cidades</a></div></div></section>
 <section class="gld-w"><div class="gld-c reveal reveal-scale"><span class="gld-ey">GOLDEN EXPERIENCE</span><h2 class="gld-t">Seja VIP</h2><div class="gld-list"><div class="gld-item"><span class="star">★</span>Imersão Golden 27/08 (Pré-evento)</div><div class="gld-item"><span class="star">★</span>Acesso a todas as plenárias</div><div class="gld-item"><span class="star">★</span>Plenária gravada vitalícia</div><div class="gld-item"><span class="star">★</span>Assentos VIP + Lounge</div><div class="gld-item"><span class="star">★</span>Coffee + Networking exclusivo</div><div class="gld-item"><span class="star">★</span>Corrida VIP inclusa</div></div><a class="btn btn-gold btn-lg" href="#" onclick="go('ingressos');return false" style="margin-top:32px">Saiba mais</a></div></section>
 <section class="run-w"><div class="run-c reveal"><span style="font-size:var(--ov);color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-weight:600">A CORRIDA MAIS NUTRITIVA DO BRASIL</span><h3 style="font-family:var(--fd);font-size:var(--h2);font-weight:800;color:var(--t1);margin:8px 0">Nutrição Brasil Run</h3><p style="font-size:var(--bs);color:var(--t2)">30 de agosto · Brasília · 5K e 10K</p><p style="font-size:var(--cap);color:var(--t2);margin-top:4px">Desconto para nutricionistas · Premiação exclusiva</p><a class="btn btn-blue btn-md" href="#" onclick="go('corrida');return false" style="margin-top:20px">Saiba mais sobre a corrida</a></div></section>
-<section class="spn-w"><span class="spn-lbl reveal">Quem lidera o mercado já passou por aqui</span><div class="marquee"><div class="marquee-inner"><div class="marquee-chip"><img src="https://framerusercontent.com/images/jZKlYk5m9Rjm2rt3Kfte0MdaE4.png?width=1149&height=232" alt="Prana"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/nzBYXQoRutMd5NkrerY8CmjNyk.png?width=2356&height=558" alt="Rousselot"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583354/nestle_health_Science_njod0z.png" alt="Nestlé"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/COVrdJPAIiZCTuSXoewCqiKxlxc.png?width=1080&height=446" alt="Bold"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/M3q4hgEcJzJFBurFzAUzVBd0Mc.png?width=1080&height=570" alt="Nude"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/gZfoeX9TPuL8fKnnY1F5TTVw.png?width=1877&height=835" alt="Belive"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167886/Logo_Caffeine_Army_ehm1x4.png" alt="Caffeine Army"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167780/cropped-logo-Puravida-1-400x123_vsfulc.png" alt="Puravida"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775168022/Logo_Pilbox_-_Simples_fundo_transparente_pt98ag.png" alt="Pilbox"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167978/Logo_Moving_png_eleagf.png" alt="Moving"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/jZKlYk5m9Rjm2rt3Kfte0MdaE4.png?width=1149&height=232" alt="Prana"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/nzBYXQoRutMd5NkrerY8CmjNyk.png?width=2356&height=558" alt="Rousselot"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583354/nestle_health_Science_njod0z.png" alt="Nestlé"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/COVrdJPAIiZCTuSXoewCqiKxlxc.png?width=1080&height=446" alt="Bold"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/M3q4hgEcJzJFBurFzAUzVBd0Mc.png?width=1080&height=570" alt="Nude"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/gZfoeX9TPuL8fKnnY1F5TTVw.png?width=1877&height=835" alt="Belive"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167886/Logo_Caffeine_Army_ehm1x4.png" alt="Caffeine Army"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167780/cropped-logo-Puravida-1-400x123_vsfulc.png" alt="Puravida"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775168022/Logo_Pilbox_-_Simples_fundo_transparente_pt98ag.png" alt="Pilbox"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167978/Logo_Moving_png_eleagf.png" alt="Moving"></div></div></div><p style="margin-top:24px" class="reveal"><a href="https://expositores.nutricaobrasil.com.br/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:var(--bs);color:var(--accent);font-weight:600;transition:opacity .15s">Seja expositor ou patrocinador →</a></p></section>
+<section class="spn-w"><span class="spn-lbl reveal">Quem lidera o mercado já passou por aqui</span><div class="marquee"><div class="marquee-inner"><div class="marquee-chip"><img src="https://framerusercontent.com/images/jZKlYk5m9Rjm2rt3Kfte0MdaE4.png?width=1149&height=232" alt="Prana"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/nzBYXQoRutMd5NkrerY8CmjNyk.png?width=2356&height=558" alt="Rousselot"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583354/nestle_health_Science_njod0z.png" alt="Nestlé"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/COVrdJPAIiZCTuSXoewCqiKxlxc.png?width=1080&height=446" alt="Bold"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/M3q4hgEcJzJFBurFzAUzVBd0Mc.png?width=1080&height=570" alt="Nude"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/gZfoeX9TPuL8fKnnY1F5TTVw.png?width=1877&height=835" alt="Belive"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167886/Logo_Caffeine_Army_ehm1x4.png" alt="Caffeine Army"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167780/cropped-logo-Puravida-1-400x123_vsfulc.png" alt="Puravida"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775168022/Logo_Pilbox_-_Simples_fundo_transparente_pt98ag.png" alt="Pilbox"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167978/Logo_Moving_png_eleagf.png" alt="Moving"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/jZKlYk5m9Rjm2rt3Kfte0MdaE4.png?width=1149&height=232" alt="Prana"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/nzBYXQoRutMd5NkrerY8CmjNyk.png?width=2356&height=558" alt="Rousselot"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583354/nestle_health_Science_njod0z.png" alt="Nestlé"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/COVrdJPAIiZCTuSXoewCqiKxlxc.png?width=1080&height=446" alt="Bold"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/M3q4hgEcJzJFBurFzAUzVBd0Mc.png?width=1080&height=570" alt="Nude"></div><div class="marquee-chip"><img src="https://framerusercontent.com/images/gZfoeX9TPuL8fKnnY1F5TTVw.png?width=1877&height=835" alt="Belive"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167886/Logo_Caffeine_Army_ehm1x4.png" alt="Caffeine Army"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167780/cropped-logo-Puravida-1-400x123_vsfulc.png" alt="Puravida"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775168022/Logo_Pilbox_-_Simples_fundo_transparente_pt98ag.png" alt="Pilbox"></div><div class="marquee-chip"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775167978/Logo_Moving_png_eleagf.png" alt="Moving"></div></div></div></section>
+</div>
 
 <!-- ══════ INGRESSOS ══════ -->
 <div class="pg" id="pg-ingressos">
@@ -492,6 +495,7 @@ details[open] summary::after{content:'−'}
 
 <!-- BH Hero -->
 <section class="bh-hero">
+<div class="bh-orb bh-orb-1"></div><div class="bh-orb bh-orb-2"></div>
 <span class="bh-pill">Próximo evento · 16 de maio</span>
 <h1>Nutrição Brasil<br><span class="bl">Belo Horizonte</span></h1>
 <p class="bh-venue">Auditório Supernova · Hotmart · 09h às 21h</p>
@@ -666,7 +670,7 @@ details[open] summary::after{content:'−'}
 </div>
 </div>
 
-<p style="font-size:var(--bs);color:var(--t3);margin-top:24px" class="reveal">Quer expor ou patrocinar? <a href="https://expositores.nutricaobrasil.com.br/" target="_blank" style="color:var(--accent);font-weight:600">Solicite sua proposta →</a></p>
+<p style="font-size:var(--bs);color:var(--t3);margin-top:24px" class="reveal">Quer participar como marca? <a href="https://wa.me/5561994502691?text=Olá! Tenho interesse em participar como marca no Nutrição Brasil BH" style="color:var(--accent);font-weight:600">Fale conosco →</a></p>
 </section>
 
 <!-- BH Final CTA -->
@@ -845,14 +849,13 @@ details[open] summary::after{content:'−'}
 </div>
 
 <!-- FOOTER -->
-<footer class="ftr"><img class="ftr-logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"><p>O evento que lidera a discussão sobre metabolismo, mente, músculo e o futuro da saúde no Brasil.</p><div class="ftr-links"><a href="#" onclick="go('home');return false">Início</a><a href="#" onclick="go('ingressos');return false">Ingressos</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a></div><div class="ftr-leg"><img class="sp-logo" src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play"><br>Science Play Cursos LTDA · CNPJ 33.612.911/0001-29</div></footer>
+<footer class="ftr"><img class="ftr-logo-img" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"><p>O evento que lidera a discussão sobre metabolismo, mente, músculo e o futuro da saúde no Brasil.</p><div class="ftr-links"><a href="#" onclick="go('home');return false">Início</a><a href="https://expositores.nutricaobrasil.com.br/" target="_blank">Expositores</a><a href="#" onclick="go('cidades');return false">Cidades</a><a href="#" onclick="go('corrida');return false">Corrida</a><a href="#" onclick="go('programacao');return false">Programação</a><a href="#" onclick="go('hall');return false">Homenageados</a></div><div class="ftr-leg"><img class="sp-logo" src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play"><br>Science Play Cursos LTDA · CNPJ 33.612.911/0001-29</div></footer>
 
 <!-- WHATSAPP + DOCK + PROGRESS -->
 <div class="progress-bar" id="progBar"></div>
 <a class="wa" href="https://wa.me/5561981382900?text=Olá! Quero saber mais sobre o Nutrição Brasil 2026" target="_blank" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <div class="dock"><div class="dock-info"><small>Brasília · 27–29 Ago</small><strong>A partir de R$ 147</strong></div><a class="dock-btn" href="#" onclick="go('ingressos');return false">Ver ingressos</a></div>
 
-</div><!-- /app -->
 <script>
 /* ═══ SMOOTH PAGE TRANSITIONS ═══ */
 let currentPage='home';
@@ -909,7 +912,7 @@ window.addEventListener('scroll',()=>{
     document.getElementById('progBar').style.width=pct+'%';
   }
   // Parallax orbs
-  const orbs=document.querySelectorAll('.hero-orb');
+  const orbs=document.querySelectorAll('.hero-orb,.bh-orb');
   orbs.forEach(o=>{o.style.transform='translateY('+y*0.15+'px)'});
 },{passive:true});
 
