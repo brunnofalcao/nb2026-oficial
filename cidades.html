@@ -43,9 +43,9 @@ section{padding:100px 0}
 /* TOPBAR */
 .topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,15,46,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(180,138,216,0.12);transition:transform .4s}
 .topbar.hidden{transform:translateY(-100%)}
-.topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1180px;margin:0 auto}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1180px;margin:0 auto}
 .topbar-logos{display:flex;align-items:center;gap:14px}
-.topbar-logos img{height:30px;object-fit:contain}
+.topbar-logos img{height:28px;max-width:170px;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{color:rgba(255,255,255,.72);font-size:14px;font-weight:500;transition:color .25s}
 .nav-links a:hover{color:#fff}
@@ -113,15 +113,16 @@ section{padding:100px 0}
 .footer-social a{color:rgba(255,255,255,.6);font-size:13px}
 .footer-text{font-size:12px;color:rgba(255,255,255,.32);line-height:1.8}
 /* STICKY MOBILE CTA */
-.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:90;background:rgba(26,15,46,.96);backdrop-filter:blur(16px);border-top:1px solid rgba(180,138,216,.2);padding:12px 16px;gap:12px;align-items:center;justify-content:space-between}
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;padding-bottom:calc(12px + env(safe-area-inset-bottom));z-index:90;background:rgba(26,15,46,.96);backdrop-filter:blur(16px);border-top:1px solid rgba(180,138,216,.2);padding:12px 16px;gap:12px;align-items:center;justify-content:space-between}
 .sticky-cta .sc-price{color:#fff;font-size:13px;font-weight:600;line-height:1.2}
 .sticky-cta .sc-price em{font-style:normal;color:var(--blue);font-family:'Instrument Serif',serif;font-size:20px;display:block}
-.sticky-cta a{background:linear-gradient(135deg,var(--purple-brand),var(--purple-mid));color:#fff;font-weight:700;font-size:14px;padding:14px 26px;border-radius:100px;white-space:nowrap}
+.sticky-cta a{background:linear-gradient(135deg,var(--purple-brand),var(--purple-mid));color:#fff;font-weight:700;font-size:14px;padding:14px 26px;border-radius:100px;white-space:nowrap;max-width:48%;overflow:hidden;text-overflow:ellipsis}
 /* RESPONSIVE base */
 @media(max-width:768px){
   section{padding:72px 0}
   .nav-links{display:none}
   .nav-toggle{display:flex}
+  .topbar-cta{display:none}
   .phero{padding:130px 0 72px}
   .phero h1{font-size:clamp(36px,9vw,50px)}
   .phero .pactions{flex-direction:column}
@@ -176,6 +177,7 @@ section{padding:100px 0}
       <a href="/programacao">Programação</a>
       <a href="/cidades">Cidades</a>
       <a href="/corrida">Corrida</a>
+      <a href="/expositores">Expositores</a>
       <a href="/hall-da-fama">Hall da Fama</a>
     </nav>
     <a href="/ingressos" class="topbar-cta" onclick="track_checkout('topbar')">Garantir vaga</a>
@@ -209,7 +211,7 @@ section{padding:100px 0}
   <div class="city-name">Belém</div>
   <div class="city-date">19 de setembro</div>
   <div class="city-venue"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Hotel Sagres</div>
-  <a href="https://belem.nutricaobrasil.com.br/" class="btn-primary" target="_blank" rel="noopener">Ver ingressos →</a>
+  <a href="/belem" class="btn-primary">Ver ingressos →</a>
 </div>
       <div class="city-card">
   <span class="city-status st-soon">Em breve</span>
@@ -271,6 +273,7 @@ section{padding:100px 0}
       <a href="/programacao">Programação</a>
       <a href="/cidades">Cidades</a>
       <a href="/corrida">Corrida</a>
+      <a href="/expositores">Expositores</a>
       <a href="/hall-da-fama">Hall da Fama</a>
     </nav>
     <div class="footer-social">
