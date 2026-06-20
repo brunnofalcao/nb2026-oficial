@@ -1,12 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/programacao/plenaria-principal", "destination": "/plenaria-principal.html" },
-    { "source": "/programacao/nutricao-esportiva", "destination": "/nutricao-esportiva.html" },
-    { "source": "/programacao/medbrasil", "destination": "/medbrasil.html" },
-    { "source": "/programacao/corrida-de-rua", "destination": "/corrida-de-rua.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
