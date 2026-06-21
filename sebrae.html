@@ -687,7 +687,17 @@ section{padding:100px 0}
         <p style="font-size:13px;color:var(--gray-400);margin-bottom:24px">Preencha os dados abaixo. O SEBRAE/DF entrará em contato com as empresas selecionadas.</p>
         <div role="main" id="expositor-sebrae-73b0789e208066a96641"></div>
         <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-        <script type="text/javascript"> new RDStationForms('expositor-sebrae-73b0789e208066a96641', 'UA-72189437-19').createForm();</script>
+        <script type="text/javascript">
+(function(){
+  function initRD(){
+    try{
+      if(typeof RDStationForms==='undefined'){setTimeout(initRD,300);return}
+      new RDStationForms('expositor-sebrae-73b0789e208066a96641','UA-72189437-19').createForm();
+    }catch(e){console.warn('RD form load:',e)}
+  }
+  initRD();
+})();
+</script>
       </div>
       <p style="margin-top:16px;text-align:center"><a href="https://wa.me/5561994502691?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20os%20estandes%20SEBRAE%20no%20Nutri%C3%A7%C3%A3o%20Brasil%202026" target="_blank" class="btn-whatsapp">💬 Dúvidas? Fale pelo WhatsApp</a></p>
     </div>
@@ -750,15 +760,6 @@ section{padding:100px 0}
 
 
 
-<!--
-╔═══════════════════════════════════════════════════╗
-║  COMO ADICIONAR FOTOS DO EVENTO                  ║
-╠═══════════════════════════════════════════════════╣
-║                                                   ║
-║  Dentro de cada <div class="marquee-item">,       ║
-║  substitua:                                       ║
-║    <div class="photo-placeholder">...</div>       ║
-║  por:                             
 <script>
 var lastY=0;
 window.addEventListener('scroll',function(){
@@ -794,13 +795,44 @@ function submitLead(){
 </script>
 <script>
 function toggleFaq(el){
-  const item=el.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0'});
-  if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  try{
+    var item=el.parentElement,a=item.querySelector('.faq-a'),open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');var fa=i.querySelector('.faq-a');if(fa)fa.style.maxHeight='0'});
+    if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  }catch(e){}
 }
-const obs=new IntersectionObserver(e=>{e.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.querySelectorAll('.bar-fill[data-w]').forEach(b=>{setTimeout(()=>{b.style.width=b.dataset.w+'%'},300)})}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal,.rstag').forEach(el=>obs.observe(el));
-window.addEventListener('scroll',()=>{document.querySelector('.topbar').style.background=window.scrollY>100?'rgba(26,15,46,.97)':'rgba(26,15,46,.92)'});
+(function(){
+  function revealAll(){
+    document.querySelectorAll('.reveal,.rstag').forEach(function(el){
+      el.classList.add('visible');
+      el.querySelectorAll('.bar-fill[data-w]').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},300)});
+    });
+  }
+  try{
+    if('IntersectionObserver' in window){
+      var obs=new IntersectionObserver(function(e){
+        e.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            entry.target.querySelectorAll('.bar-fill[data-w]').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},300)});
+          }
+        });
+      },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+      document.querySelectorAll('.reveal,.rstag').forEach(function(el){obs.observe(el)});
+      // fallback de segurança: se em 1.2s nada revelou, mostra tudo
+      setTimeout(function(){
+        var anyVisible=document.querySelector('.reveal.visible');
+        if(!anyVisible)revealAll();
+      },1200);
+    }else{
+      revealAll();
+    }
+  }catch(e){revealAll()}
+  try{
+    var tb=document.querySelector('.topbar');
+    if(tb){window.addEventListener('scroll',function(){tb.style.background=window.scrollY>100?'rgba(26,15,46,.97)':'rgba(26,15,46,.92)'})}
+  }catch(e){}
+})();
 </script>
 </body>
 </html>
