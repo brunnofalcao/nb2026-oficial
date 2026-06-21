@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hall da Fama — Nutrição Brasil 2026</title>
-<meta name="description" content="O Hall da Fama do Nutrição Brasil celebra os nomes que honram a nutrição brasileira. Homenagem no Dia do Nutricionista, 27 de agosto, Brasília.">
+<title>Hall da Fama Nutrição Brasil | Homenageados 2023–2026</title>
+<meta name="description" content="Conheça os nomes que honram a nutrição brasileira no Hall da Fama do Nutrição Brasil. Homenagem no Dia do Nutricionista, 27 de agosto, Brasília.">
 <link rel="canonical" href="https://www.nutricaobrasil.com.br/hall-da-fama">
 <meta name="geo.region" content="BR-DF"><meta name="geo.placename" content="Brasília">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hall da Fama — Nutrição Brasil 2026">
-<meta property="og:description" content="O Hall da Fama do Nutrição Brasil celebra os nomes que honram a nutrição brasileira. Homenagem no Dia do Nutricionista, 27 de agosto, Brasília.">
+<meta property="og:title" content="Hall da Fama · Nutrição Brasil">
+<meta property="og:description" content="Os nomes que elevaram a nutrição brasileira. Uma homenagem no Dia do Nutricionista, edição após edição.">
 <meta property="og:url" content="https://www.nutricaobrasil.com.br/hall-da-fama">
 <meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/w_1200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png">
 <meta name="twitter:card" content="summary_large_image">
 <!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','460696430970324');fbq('track','PageView');</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=460696430970324&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=460696430970324&ev=PageView&noscript=1"/ loading="lazy" decoding="async"></noscript>
 <!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y2HLCV0V0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-8Y2HLCV0V0');</script>
@@ -154,12 +154,15 @@ section{padding:100px 0}
 .hof-card.future .hof-role{color:rgba(255,255,255,.6)}
 
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.nutricaobrasil.com.br/"},{"@type":"ListItem","position":2,"name":"Hall da Fama","item":"https://www.nutricaobrasil.com.br/hall-da-fama"}]}
+</script>
 </head>
 <body>
 <header class="topbar" id="hdr">
   <div class="topbar-inner">
     <div class="topbar-logos">
-      <a href="/"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil"></a>
+      <a href="/"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28"></a>
     </div>
     <nav class="nav-links">
       <a href="/programacao">Programação</a>
@@ -247,9 +250,9 @@ section{padding:100px 0}
 <footer class="footer">
   <div class="container">
     <div class="footer-logos">
-      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil">
+      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28">
       <span class="sep"></span>
-      <img src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play">
+      <img src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play" loading="lazy" decoding="async">
     </div>
     <nav class="footer-nav">
       <a href="/ingressos">Ingressos</a>
@@ -286,10 +289,23 @@ function track_checkout(origin){try{fbq('track','InitiateCheckout',{content_name
 function submitLead(){
   var name=document.getElementById('lead-name').value.trim();
   var email=document.getElementById('lead-email').value.trim();
-  if(!email||email.indexOf('@')<1){alert('Por favor, informe um e-mail válido.');return}
-  var payload={event_type:'CONVERSION',event_family:'CDP',payload:{conversion_identifier:'site-nutricaobrasil-lead',email:email,name:name||undefined,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname}};
-  fetch('https://api.rd.services/platform/events',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
-  try{gtag('event','generate_lead');fbq('track','Lead')}catch(e){}
+  if(!email||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)===false){alert('Por favor, informe um e-mail válido.');return}
+  var lead={email:email,name:name,pagina:window.location.pathname,ts:new Date().toISOString()};
+  // 1) Backup local — nunca perde o lead, mesmo se a API falhar
+  try{var k='nb_leads';var arr=JSON.parse(localStorage.getItem(k)||'[]');arr.push(lead);localStorage.setItem(k,JSON.stringify(arr));console.log('[NB lead salvo]',lead)}catch(e){}
+  // 2) RD Station — método nativo via loader (sem token exposto); fallback pro endpoint de eventos
+  try{
+    if(window.RdIntegration&&RdIntegration.post){
+      RdIntegration.post({token_rdstation:'',identificador:'site-nutricaobrasil-lead',email:email,nome:name,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname});
+    }else{
+      var payload={event_type:'CONVERSION',event_family:'CDP',payload:{conversion_identifier:'site-nutricaobrasil-lead',email:email,name:name||undefined,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname}};
+      fetch('https://api.rd.services/platform/events',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
+    }
+  }catch(e){}
+  // 3) Conversão no GA + Pixel (sempre dispara — você vê o volume mesmo sem o RD)
+  try{gtag('event','generate_lead')}catch(e){}
+  try{fbq('track','Lead')}catch(e){}
+  // 4) Confirmação visual
   document.getElementById('leadForm').style.display='none';
   document.getElementById('leadOk').style.display='block';
 }
