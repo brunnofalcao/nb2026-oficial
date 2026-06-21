@@ -11,8 +11,11 @@
 <meta property="og:title" content="Página não encontrada — Nutrição Brasil 2026">
 <meta property="og:description" content="Página não encontrada. Volte para a home do Nutrição Brasil 2026.">
 <meta property="og:url" content="https://www.nutricaobrasil.com.br/404">
-<meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/w_1200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png">
+<meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001371/Logo_Site_-_Social_Share_zlc4mz.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001371/Logo_Site_-_Social_Share_zlc4mz.png">
 <!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','460696430970324');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=460696430970324&ev=PageView&noscript=1"/ loading="lazy" decoding="async"></noscript>
@@ -148,7 +151,7 @@ section{padding:100px 0}
 <header class="topbar" id="hdr">
   <div class="topbar-inner">
     <div class="topbar-logos">
-      <a href="/"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28"></a>
+      <a href="/"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28"></a>
     </div>
     <nav class="nav-links">
       <a href="/programacao">Programação</a>
@@ -177,7 +180,7 @@ section{padding:100px 0}
 <footer class="footer">
   <div class="container">
     <div class="footer-logos">
-      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/w_200,q_80/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28">
+      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" loading="eager" fetchpriority="high" width="170" height="28">
       <span class="sep"></span>
       <img src="https://email-editor-production.s3.amazonaws.com/images/222578/Science%20Play%20-%20Negativa.png" alt="Science Play" loading="lazy" decoding="async">
     </div>
@@ -219,7 +222,7 @@ function submitLead(){
   // 2) RD Station — método nativo via loader (sem token exposto); fallback pro endpoint de eventos
   try{
     if(window.RdIntegration&&RdIntegration.post){
-      RdIntegration.post({token_rdstation:'',identificador:'site-nutricaobrasil-lead',email:email,nome:name,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname});
+      RdIntegration.post({token_rdstation:'0d0a7a2c54867e2123724757fbd2280d',identificador:'site-nutricaobrasil-lead',email:email,nome:name,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname});
     }else{
       var payload={event_type:'CONVERSION',event_family:'CDP',payload:{conversion_identifier:'site-nutricaobrasil-lead',email:email,name:name||undefined,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname}};
       fetch('https://api.rd.services/platform/events',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
