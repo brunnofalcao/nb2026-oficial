@@ -168,6 +168,9 @@ section{padding:100px 0}
 .disabled{display:inline-flex;align-items:center;gap:8px;color:var(--gray-400);font-weight:600;font-size:14px;cursor:default}
 @media(max-width:768px){.city-grid{grid-template-columns:1fr}}
 
+
+.city-cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;padding:13px 24px;border-radius:100px;position:relative;border:1.5px solid var(--purple-brand);color:var(--purple-brand);background:transparent;transition:all .3s;align-self:flex-start;cursor:pointer;text-decoration:none}
+.city-cta:hover{background:var(--purple-brand);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(111,77,137,.3)}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.nutricaobrasil.com.br/"},{"@type":"ListItem","position":2,"name":"Cidades","item":"https://www.nutricaobrasil.com.br/cidades"}]}
@@ -224,14 +227,14 @@ section{padding:100px 0}
   <div class="city-name">Goiânia</div>
   <div class="city-date">7 de novembro</div>
   <div class="city-venue"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Castro's Hotel</div>
-  <span class="disabled">Inscrições em breve</span>
+  <a href="https://materiais.scienceplay.com/save-the-date-goiania-2026" class="city-cta" target="_blank" rel="noopener" onclick="track_checkout('lista-espera-goiania')">Entrar na lista de espera →</a>
 </div>
       <div class="city-card">
   <span class="city-status st-soon">Em breve</span>
   <div class="city-name">Porto Alegre</div>
   <div class="city-date">14 de novembro</div>
   <div class="city-venue"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Hotel Deville Prime</div>
-  <span class="disabled">Inscrições em breve</span>
+  <a href="https://materiais.scienceplay.com/save-the-date-poa-2026" class="city-cta" target="_blank" rel="noopener" onclick="track_checkout('lista-espera-porto-alegre')">Entrar na lista de espera →</a>
 </div>
       <div class="city-card">
   <span class="city-status st-closed">Encerrado</span>
