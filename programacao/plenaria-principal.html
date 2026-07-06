@@ -164,9 +164,34 @@ section{padding:100px 0}
 .cta-final{background:linear-gradient(165deg,var(--purple-deep),#2a1547);text-align:center}
 .cta-final .section-title{color:#fff}.cta-final .section-title em{color:var(--nude)}
 
+
+/* ===== AGENDA / PROGRAMAÇÃO ===== */
+.agenda{background:var(--white)}
+.agenda-day{max-width:860px;margin:0 auto 46px}
+.agenda-day-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;padding-bottom:14px;border-bottom:2px solid var(--purple-brand)}
+.agenda-day-head .d{font-family:'Instrument Serif',serif;font-size:32px;color:var(--purple-deep);line-height:1}
+.agenda-day-head .w{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--purple-brand)}
+.ag-row{display:grid;grid-template-columns:120px 200px 1fr;gap:16px;padding:14px 16px;border-radius:12px;align-items:start}
+.ag-row:nth-child(even){background:var(--off-white)}
+.ag-time{font-size:13px;font-weight:700;color:var(--purple-brand);white-space:nowrap;padding-top:2px}
+.ag-spk{font-size:14px;font-weight:700;color:var(--purple-deep);line-height:1.35}
+.ag-talk{font-size:14px;line-height:1.55;color:var(--gray-600)}
+.ag-row.pause{background:linear-gradient(90deg,rgba(111,77,137,.07),rgba(111,77,137,.02));border:1px dashed var(--gray-200)}
+.ag-row.pause .ag-spk{color:var(--purple-brand);text-transform:uppercase;letter-spacing:.6px;font-size:12px}
+.ag-row.tbd .ag-spk,.ag-row.tbd .ag-talk{color:var(--gray-400);font-style:italic}
+.agenda-note{max-width:860px;margin:8px auto 0;font-size:13px;color:var(--gray-400);text-align:center}
+@media(max-width:768px){.ag-row{grid-template-columns:1fr;gap:4px;padding:14px}.ag-time{font-size:12px}.agenda-day-head .d{font-size:26px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.nutricaobrasil.com.br/"},{"@type":"ListItem","position":2,"name":"Programação","item":"https://www.nutricaobrasil.com.br/programacao"},{"@type":"ListItem","position":3,"name":"Plenária Principal","item":"https://www.nutricaobrasil.com.br/programacao/plenaria-principal"}]}
+</script>
+<!-- Microsoft Clarity — heatmaps + session replay. Trocar SEU_PROJECT_ID pelo ID gerado em clarity.microsoft.com -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "SEU_PROJECT_ID");
 </script>
 </head>
 <body>
@@ -212,6 +237,28 @@ section{padding:100px 0}
       <div class="axis"><h3>Comportamento</h3><p>Ambiente, compulsão, autoimagem e adesão.</p></div>
       <div class="axis"><h3>Estética</h3><p>Composição corporal feminina, pele, colágeno e crítica ao hype.</p></div>
     </div>
+  </div>
+</section>
+<section class="agenda" id="agenda">
+  <div class="container center">
+    <span class="section-label"><span class="line"></span>Programação completa</span>
+    <h2 class="section-title">Três dias de <em>imersão</em></h2>
+    <p class="section-intro" style="margin:0 auto">Grade sujeita a ajustes. Horários de Brasília.</p>
+  </div>
+  <div class="container">
+    <div class="agenda-day">
+      <div class="agenda-day-head"><span class="d">27 de agosto</span><span class="w">Quinta-feira · Noite de abertura</span></div>
+      <div class="ag-row"><div class="ag-time">19h00 – 19h20</div><div class="ag-spk">Brunno Falcão</div><div class="ag-talk">Abertura oficial do Nutrição Brasil 2026</div></div><div class="ag-row"><div class="ag-time">19h20 – 19h50</div><div class="ag-spk">Dra. Ana Paula Pujol</div><div class="ag-talk">Análogos de GLP-1 na saúde feminina: impactos, benefícios e particularidades nas diferentes fases da vida da mulher</div></div><div class="ag-row"><div class="ag-time">19h50 – 20h20</div><div class="ag-spk">Dra. Denise Carreiro</div><div class="ag-talk">Hipersensibilidade alimentar no manejo do estresse</div></div><div class="ag-row"><div class="ag-time">20h20 – 20h50</div><div class="ag-spk">Dra. Andréia Naves</div><div class="ag-talk">Conexão intestino, músculo e cérebro: o papel da nutrição e do exercício</div></div><div class="ag-row"><div class="ag-time">20h50 – 21h20</div><div class="ag-spk">Dra. Samira Lima</div><div class="ag-talk">Inflammaging na prática clínica: como a nutrição pode modular o envelhecimento</div></div><div class="ag-row"><div class="ag-time">21h20 – 21h50</div><div class="ag-spk">Dra. Rita Castro</div><div class="ag-talk">O novo corpo feminino: da saúde de precisão à coerência biológica</div></div>
+    </div>
+    <div class="agenda-day">
+      <div class="agenda-day-head"><span class="d">28 de agosto</span><span class="w">Sexta-feira</span></div>
+      <div class="ag-row"><div class="ag-time">09h00 – 09h40</div><div class="ag-spk">Dr. Murilo Pereira</div><div class="ag-talk">Microbiota intestinal e obesidade: o que mudou na era dos análogos de GLP-1</div></div><div class="ag-row"><div class="ag-time">09h40 – 10h20</div><div class="ag-spk">Dra. Karina Al Assal</div><div class="ag-talk">GLP-1 é prejudicial ou benéfico para a microbiota?</div></div><div class="ag-row"><div class="ag-time">10h20 – 11h00</div><div class="ag-spk">Dra. Vânia Mattoso</div><div class="ag-talk">O futuro da saúde feminina está no intestino?</div></div><div class="ag-row pause"><div class="ag-time">11h00 – 11h40</div><div class="ag-spk">Intervalo</div><div class="ag-talk"></div></div><div class="ag-row tbd"><div class="ag-time">11h40 – 12h20</div><div class="ag-spk">Dr. Luiz Moreira</div><div class="ag-talk">Tema a confirmar</div></div><div class="ag-row"><div class="ag-time">12h20 – 13h00</div><div class="ag-spk">Dra. Luisa Wolpe</div><div class="ag-talk">Emagrecimento com responsabilidade: como elaborar um plano dietético na era dos agonistas de GLP-1</div></div><div class="ag-row pause"><div class="ag-time">13h00 – 14h40</div><div class="ag-spk">Almoço</div><div class="ag-talk"></div></div><div class="ag-row"><div class="ag-time">14h40 – 15h20</div><div class="ag-spk">Dra. Roberta Carbonari</div><div class="ag-talk">O abismo entre saber e fazer: a neurociência da mudança de comportamento alimentar</div></div><div class="ag-row"><div class="ag-time">15h20 – 16h00</div><div class="ag-spk">Dra. Denise de Carvalho</div><div class="ag-talk">Além da dieta: os fatores comportamentais que modulam a sua microbiota</div></div><div class="ag-row"><div class="ag-time">16h00 – 16h40</div><div class="ag-spk">Dra. Brunna Boaventura</div><div class="ag-talk">Compulsão, ansiedade e ambiente obesogênico: nutrição comportamental na prática</div></div><div class="ag-row pause"><div class="ag-time">16h40 – 17h20</div><div class="ag-spk">Intervalo</div><div class="ag-talk"></div></div><div class="ag-row"><div class="ag-time">17h20 – 18h00</div><div class="ag-spk">Dra. Andréia Friques e Dr. Cristiano Nader</div><div class="ag-talk">Muito antes do emagrecimento: a origem fetal das doenças metabólicas e o papel da nutrição na prevenção</div></div><div class="ag-row"><div class="ag-time">18h00 – 18h40</div><div class="ag-spk">Dr. Thiago Castro</div><div class="ag-talk">Neurodivergências, metabolismo e GLP-1: o cérebro da próxima geração</div></div>
+    </div>
+    <div class="agenda-day">
+      <div class="agenda-day-head"><span class="d">29 de agosto</span><span class="w">Sábado</span></div>
+      <div class="ag-row"><div class="ag-time">09h00 – 09h40</div><div class="ag-spk">Dr. Igor Caleb</div><div class="ag-talk">Ferramentas para otimizar a rotina e expandir o faturamento como nutricionista de consultório</div></div><div class="ag-row tbd"><div class="ag-time">09h40 – 10h20</div><div class="ag-spk">A definir</div><div class="ag-talk">Tema a confirmar</div></div><div class="ag-row tbd"><div class="ag-time">10h20 – 11h00</div><div class="ag-spk">Dr. Thiago Cabral e Dra. Giselle Santos</div><div class="ag-talk">Tema a confirmar</div></div><div class="ag-row pause"><div class="ag-time">11h00 – 11h40</div><div class="ag-spk">Intervalo</div><div class="ag-talk"></div></div><div class="ag-row"><div class="ag-time">11h40 – 12h20</div><div class="ag-spk">Dra. Bettina Moritz</div><div class="ag-talk">Muito além da perda de peso: como a composição corporal impacta hormônios, fertilidade e longevidade</div></div><div class="ag-row"><div class="ag-time">12h20 – 13h00</div><div class="ag-spk">Dr. Henrique Freire</div><div class="ag-talk">Como evitar nutricionalmente a queda do metabolismo em usuários de análogos de GLP-1</div></div><div class="ag-row pause"><div class="ag-time">13h00 – 14h40</div><div class="ag-spk">Almoço</div><div class="ag-talk"></div></div><div class="ag-row tbd"><div class="ag-time">14h40 – 15h20</div><div class="ag-spk">A definir</div><div class="ag-talk">Tema a confirmar</div></div><div class="ag-row"><div class="ag-time">15h20 – 16h00</div><div class="ag-spk">Dra. Juliana Bicca</div><div class="ag-talk">Perimenopausa: a década esquecida da saúde da mulher</div></div><div class="ag-row"><div class="ag-time">16h00 – 16h40</div><div class="ag-spk">Dra. Lorena Tomazett</div><div class="ag-talk">O corpo que a mulher habita: imagem corporal, trauma e a relação com a comida que nenhum protocolo resolve</div></div><div class="ag-row pause"><div class="ag-time">16h40 – 17h20</div><div class="ag-spk">Intervalo</div><div class="ag-talk"></div></div><div class="ag-row"><div class="ag-time">17h20 – 18h00</div><div class="ag-spk">Dra. Bruna Pitaluga</div><div class="ag-talk">Pré-natal do Século XXI na era dos agonistas de GLP-1</div></div><div class="ag-row"><div class="ag-time">18h00 – 18h40</div><div class="ag-spk">Dr. Victor Sorrentino</div><div class="ag-talk">Burnout: o preço das escolhas e das iatrogenias</div></div>
+    </div>
+    <p class="agenda-note">Programação em constante atualização — novos nomes e temas serão confirmados.</p>
   </div>
 </section>
 <section class="speakers">
@@ -280,8 +327,8 @@ section{padding:100px 0}
       <h2 class="section-title">Receba as novidades em <em>primeira mão</em></h2>
       <p class="section-intro" style="margin:0 auto">Viradas de lote, novos palestrantes confirmados e condições especiais. Direto no seu e-mail, sem spam.</p>
       <div class="lead-form" id="leadForm">
-        <input type="text" id="lead-name" placeholder="Seu nome" autocomplete="name">
-        <input type="email" id="lead-email" placeholder="Seu melhor e-mail" autocomplete="email">
+        <input type="text" id="lead-name" data-clarity-mask="true" placeholder="Seu nome" autocomplete="name">
+        <input type="email" id="lead-email" data-clarity-mask="true" placeholder="Seu melhor e-mail" autocomplete="email">
         <button onclick="submitLead()">Quero receber →</button>
       </div>
       <div class="lead-ok" id="leadOk">Pronto! Você está na lista. ✓</div>
