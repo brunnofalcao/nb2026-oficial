@@ -236,6 +236,14 @@ section{padding:100px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+<!-- Microsoft Clarity — heatmaps + session replay. Trocar SEU_PROJECT_ID pelo ID gerado em clarity.microsoft.com -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "SEU_PROJECT_ID");
+</script>
 </head>
 <body>
 
@@ -423,11 +431,14 @@ section{padding:100px 0}
       <span class="section-label"><span class="line"></span>Fique por dentro</span>
       <h2 class="section-title">Receba as novidades em <em>primeira mão</em></h2>
       <p class="section-intro" style="margin:0 auto">Viradas de lote, novos palestrantes confirmados e condições especiais. Direto no seu e-mail, sem spam.</p>
-      <div class="lead-form" id="leadForm">
-        <input type="text" id="lead-name" placeholder="Seu nome" autocomplete="name">
-        <input type="email" id="lead-email" placeholder="Seu melhor e-mail" autocomplete="email">
-        <button onclick="submitLead()">Quero receber →</button>
-      </div>
+      <form class="lead-form" id="leadForm" method="POST">
+        <input type="text" name="name" id="lead-name" data-clarity-mask="true" placeholder="Seu nome" autocomplete="name" required>
+        <input type="email" name="email" id="lead-email" data-clarity-mask="true" placeholder="Seu melhor e-mail" autocomplete="email" required>
+        <input type="hidden" name="identificador" value="site-lead-newsletter">
+        <input type="hidden" name="cf_origem" value="site-nutricaobrasil">
+        <input type="hidden" name="cf_pagina" value="home">
+        <button type="submit">Quero receber →</button>
+      </form>
       <div class="lead-ok" id="leadOk">Pronto! Você está na lista. ✓</div>
       <p class="lead-note">Ao enviar, você concorda em receber comunicações do Nutrição Brasil.</p>
     </div>
@@ -491,30 +502,33 @@ var mEl=document.querySelector('.metrics');if(mEl)mObs.observe(mEl);
 /* Checkout tracking */
 function track_checkout(origin){try{fbq('track','InitiateCheckout',{content_name:origin});gtag('event','begin_checkout',{origin:origin})}catch(e){}}
 
-/* Lead form → RD Station */
-function submitLead(){
+/* Lead form → /api/leads (Vercel Edge Function) */
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
   var name=document.getElementById('lead-name').value.trim();
   var email=document.getElementById('lead-email').value.trim();
-  if(!email||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)===false){alert('Por favor, informe um e-mail válido.');return}
-  var lead={email:email,name:name,pagina:window.location.pathname,ts:new Date().toISOString()};
-  // 1) Backup local — nunca perde o lead, mesmo se a API falhar
-  try{var k='nb_leads';var arr=JSON.parse(localStorage.getItem(k)||'[]');arr.push(lead);localStorage.setItem(k,JSON.stringify(arr));console.log('[NB lead salvo]',lead)}catch(e){}
-  // 2) RD Station — método nativo via loader (sem token exposto); fallback pro endpoint de eventos
-  try{
-    if(window.RdIntegration&&RdIntegration.post){
-      RdIntegration.post({token_rdstation:'0d0a7a2c54867e2123724757fbd2280d',identificador:'site-nutricaobrasil-lead',email:email,nome:name,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname});
-    }else{
-      var payload={event_type:'CONVERSION',event_family:'CDP',payload:{conversion_identifier:'site-nutricaobrasil-lead',email:email,name:name||undefined,cf_origem:'site-nutricaobrasil',cf_pagina:window.location.pathname}};
-      fetch('https://api.rd.services/platform/events',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
-    }
-  }catch(e){}
-  // 3) Conversão no GA + Pixel (sempre dispara — você vê o volume mesmo sem o RD)
-  try{gtag('event','generate_lead')}catch(e){}
-  try{fbq('track','Lead')}catch(e){}
-  // 4) Confirmação visual
-  document.getElementById('leadForm').style.display='none';
-  document.getElementById('leadOk').style.display='block';
-}
+  if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('Por favor, informe um e-mail válido.');return}
+  var btn=this.querySelector('button');btn.disabled=true;btn.textContent='Enviando...';
+  var lead={email:email,name:name,pagina:'/',ts:new Date().toISOString()};
+  // Backup local
+  try{var arr=JSON.parse(localStorage.getItem('nb_leads')||'[]');arr.push(lead);localStorage.setItem('nb_leads',JSON.stringify(arr))}catch(e){}
+  // POST → /api/leads
+  fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,name:name,cf_origem:'site-nutricaobrasil',cf_pagina:'home'})})
+    .then(function(res){return res.json()})
+    .then(function(data){
+      // Sucesso ou erro da API
+      try{gtag('event','generate_lead',{email:email})}catch(e){}
+      try{fbq('track','Lead')}catch(e){}
+      document.getElementById('leadForm').style.display='none';
+      document.getElementById('leadOk').style.display='block';
+      btn.disabled=false;btn.textContent='Quero receber →';
+    })
+    .catch(function(err){
+      console.error('[Lead] Erro:',err);
+      alert('Erro ao enviar. Tente novamente.');
+      btn.disabled=false;btn.textContent='Quero receber →';
+    });
+});
 </script>
 </body>
 </html>
