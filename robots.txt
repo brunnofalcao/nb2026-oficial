@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.nutricaobrasil.com.br/sitemap.xml
+Sitemap: https://www.nutricaobrasil.com.br/sitemap-news.xml

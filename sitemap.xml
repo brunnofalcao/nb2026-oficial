@@ -13,4 +13,16 @@
   <url><loc>https://www.nutricaobrasil.com.br/cidades</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nutricaobrasil.com.br/corrida</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.nutricaobrasil.com.br/hall-da-fama</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/brasilia</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/belem</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/goiania</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/porto-alegre</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/imprensa</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/brasilia/programacao-plenaria-principal-2026</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/brasilia/nutricao-esportiva-glp1-performance</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/brasilia/tema-central-o-novo-corpo</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/brasilia/nb-run-dia-do-nutricionista</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/belem/imersao-hotel-sagres-19-setembro</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.nutricaobrasil.com.br/noticias/goiania-porto-alegre-fecham-calendario-2026</loc><lastmod>2026-07-10</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

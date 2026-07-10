@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nutrição Brasil — Notícias</title>
+    <link>https://www.nutricaobrasil.com.br/noticias</link>
+    <atom:link href="https://www.nutricaobrasil.com.br/noticias/rss.xml" rel="self" type="application/rss+xml"/>
+    <description>Notícias oficiais do maior evento de nutrição do Brasil: programação, palestrantes, edições regionais e NB Run.</description>
+    <language>pt-br</language>
+    <lastBuildDate>Fri, 10 Jul 2026 12:00:00 -0300</lastBuildDate>
+    <image><url>https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_01_oet53j.png</url><title>Nutrição Brasil — Notícias</title><link>https://www.nutricaobrasil.com.br/noticias</link></image>
+    <item>
+      <title>Nutrição Brasil 2026 divulga programação completa da Plenária Principal em Brasília</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/brasilia/programacao-plenaria-principal-2026</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/brasilia/programacao-plenaria-principal-2026</guid>
+      <pubDate>Fri, 10 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Programação</category>
+      <description>Maior evento de nutrição do país anuncia grade de três dias no Centro de Convenções Ulysses Guimarães, com saúde da mulher, microbiota, comportamento alimentar e era GLP-1 no centro do debate.</description>
+    </item>
+    <item>
+      <title>Congresso de Nutrição Esportiva do Nutrição Brasil terá dia inteiro sobre GLP-1, músculo e performance</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/brasilia/nutricao-esportiva-glp1-performance</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/brasilia/nutricao-esportiva-glp1-performance</guid>
+      <pubDate>Fri, 10 Jul 2026 09:30:00 -0300</pubDate>
+      <category>Programação</category>
+      <description>Grade de 28 de agosto reúne endocrinologia do atleta, microbiota do corredor, nutrição de endurance e a nova fronteira dos peptídeos e miméticos orais no esporte.</description>
+    </item>
+    <item>
+      <title>&#x27;O novo corpo&#x27;: Nutrição Brasil 2026 propõe leitura completa do emagrecimento moderno</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/brasilia/tema-central-o-novo-corpo</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/brasilia/tema-central-o-novo-corpo</guid>
+      <pubDate>Fri, 10 Jul 2026 10:00:00 -0300</pubDate>
+      <category>Evento</category>
+      <description>Tema central da edição articula doença metabólica, saúde mental, músculo, estética com responsabilidade e era GLP-1 em cinco trilhas científicas.</description>
+    </item>
+    <item>
+      <title>NB Run 2026: corrida de rua celebra o Dia do Nutricionista em Brasília em 30 de agosto</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/brasilia/nb-run-dia-do-nutricionista</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/brasilia/nb-run-dia-do-nutricionista</guid>
+      <pubDate>Fri, 10 Jul 2026 10:30:00 -0300</pubDate>
+      <category>NB Run</category>
+      <description>Prova de 5K e 10K fecha a semana do Nutrição Brasil no dia seguinte ao congresso, com expectativa de 1.500 corredores e inscrições abertas no TicketSports.</description>
+    </item>
+    <item>
+      <title>Nutrição Brasil chega a Belém em 19 de setembro com imersão de um dia no Hotel Sagres</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/belem/imersao-hotel-sagres-19-setembro</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/belem/imersao-hotel-sagres-19-setembro</guid>
+      <pubDate>Fri, 10 Jul 2026 11:00:00 -0300</pubDate>
+      <category>Agenda 2026</category>
+      <description>Edição paraense reúne oito nomes da nutrição e da medicina em um sábado de imersão científica, com ingressos a partir de R$ 547.</description>
+    </item>
+    <item>
+      <title>Nutrição Brasil confirma edições em Goiânia e Porto Alegre em novembro de 2026</title>
+      <link>https://www.nutricaobrasil.com.br/noticias/goiania-porto-alegre-fecham-calendario-2026</link>
+      <guid isPermaLink="true">https://www.nutricaobrasil.com.br/noticias/goiania-porto-alegre-fecham-calendario-2026</guid>
+      <pubDate>Fri, 10 Jul 2026 11:30:00 -0300</pubDate>
+      <category>Agenda 2026</category>
+      <description>Depois de Brasília e Belém, evento fecha o calendário do ano no Centro-Oeste e no Sul, com listas de espera já abertas.</description>
+    </item>
+  </channel>
+</rss>
