@@ -22,6 +22,7 @@ export default async function handler(req, res) {
     const payload = {
       email: email,
       name: name || 'Lead sem nome',
+      identificador: 'LeadNB',
       cf_origem: cf_origem,
       cf_pagina: cf_pagina,
     };
