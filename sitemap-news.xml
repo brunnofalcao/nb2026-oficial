@@ -85,4 +85,40 @@
       <news:title>Capital da gastronomia amazônica, Belém entra no calendário do maior evento de nutrição do Brasil</news:title>
     </news:news>
   </url>
+  <url>
+    <loc>https://www.nutricaobrasil.com.br/noticias/brasilia/expo-ambiente-de-negocios</loc>
+    <lastmod>2026-07-10T15:00:00-03:00</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Nutrição Brasil</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-10T15:00:00-03:00</news:publication_date>
+      <news:title>Onde a ciência encontra o mercado: a expo do Nutrição Brasil como ambiente de negócios</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.nutricaobrasil.com.br/noticias/brasilia/nb-run-tradicao-da-profissao</loc>
+    <lastmod>2026-07-10T15:30:00-03:00</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Nutrição Brasil</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-10T15:30:00-03:00</news:publication_date>
+      <news:title>A corrida que virou tradição: como a NB Run transformou o Dia do Nutricionista em movimento</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.nutricaobrasil.com.br/noticias/brasilia/dia-do-nutricionista-homenagem</loc>
+    <lastmod>2026-07-10T16:00:00-03:00</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Nutrição Brasil</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-10T16:00:00-03:00</news:publication_date>
+      <news:title>Dia do Nutricionista: por que o Nutrição Brasil abre o congresso com uma homenagem</news:title>
+    </news:news>
+  </url>
 </urlset>
