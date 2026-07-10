@@ -73,4 +73,16 @@
       <news:title>Nutrição Brasil confirma edições em Goiânia e Porto Alegre em novembro de 2026</news:title>
     </news:news>
   </url>
+  <url>
+    <loc>https://www.nutricaobrasil.com.br/noticias/belem/capital-da-gastronomia-recebe-maior-evento-de-nutricao</loc>
+    <lastmod>2026-07-10T14:00:00-03:00</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Nutrição Brasil</news:name>
+        <news:language>pt</news:language>
+      </news:publication>
+      <news:publication_date>2026-07-10T14:00:00-03:00</news:publication_date>
+      <news:title>Capital da gastronomia amazônica, Belém entra no calendário do maior evento de nutrição do Brasil</news:title>
+    </news:news>
+  </url>
 </urlset>
