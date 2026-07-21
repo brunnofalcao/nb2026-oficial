@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programação Nutrição Brasil 2026 | 4 Módulos Científicos</title>
-<meta name="description" content="Conheça os 4 módulos do Nutrição Brasil 2026: Plenária Principal, Nutrição Esportiva, MedBrasil e Corrida de Rua. Mais de 30 palestrantes confirmados.">
+<meta name="description" content="Conheça os 4 módulos do Nutrição Brasil 2026: Plenária Principal, Nutrição Esportiva, MedBrasil e NB Universitário. Mais de 30 palestrantes confirmados.">
 <link rel="canonical" href="https://www.nutricaobrasil.com.br/programacao">
 <meta name="geo.region" content="BR-DF"><meta name="geo.placename" content="Brasília">
 <meta property="og:type" content="website">
@@ -151,6 +151,16 @@ section{padding:100px 0}
 .mod-meta{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:var(--gray-400)}
 @media(max-width:768px){.mod-grid{grid-template-columns:1fr}}
 
+
+/* ===== BARRA VIRADA DE LOTE ===== */
+#lote-bar{position:relative;z-index:60;background:linear-gradient(90deg,#6f4d89,#8B5FB5 55%,#80c0ff);color:#fff;text-align:center;padding:9px 44px 9px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.35;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+#lote-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px;font-weight:800;white-space:nowrap}
+#lote-bar .lb-count{display:inline-flex;gap:5px;align-items:center;font-variant-numeric:tabular-nums}
+#lote-bar .lb-count b{background:rgba(255,255,255,.18);border-radius:6px;padding:2px 7px;font-weight:800;min-width:30px;display:inline-block}
+#lote-bar .lb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:17px;cursor:pointer;opacity:.8;line-height:1;padding:4px}
+#lote-bar .lb-close:hover{opacity:1}
+#lote-bar.lb-ended{background:#1a0f2e}
+@media(max-width:600px){#lote-bar{font-size:12.5px;padding:8px 40px 8px 12px;gap:6px}#lote-bar .lb-count b{padding:2px 5px;min-width:24px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.nutricaobrasil.com.br/"},{"@type":"ListItem","position":2,"name":"Programação","item":"https://www.nutricaobrasil.com.br/programacao"}]}
@@ -165,6 +175,35 @@ section{padding:100px 0}
 </script>
 </head>
 <body>
+<!-- BARRA VIRADA DE LOTE -->
+<div id="lote-bar" role="status">
+  <span>⏳ <strong>1º lote encerra em breve</strong> — depois de <b style="font-weight:800">20/07</b> o preço sobe.</span>
+  <span class="lb-count" id="lbCount" aria-label="tempo restante"></span>
+  <a href="/ingressos" onclick="try{track_checkout('lote-bar')}catch(e){}">Garantir 1º lote →</a>
+  <button class="lb-close" aria-label="Fechar" onclick="document.getElementById('lote-bar').style.display='none'">×</button>
+</div>
+<script>
+(function(){
+  // 20 de julho de 2026, 23:59:59 — horário de Brasília (UTC-3)
+  var deadline = new Date('2026-07-20T23:59:59-03:00').getTime();
+  var el = document.getElementById('lbCount');
+  var bar = document.getElementById('lote-bar');
+  if(!el) return;
+  function tick(){
+    var diff = deadline - Date.now();
+    if(diff <= 0){
+      bar.classList.add('lb-ended');
+      bar.querySelector('span').innerHTML = '🔥 <strong>Lote 1 encerrado.</strong> Garanta agora antes da próxima virada.';
+      el.innerHTML='';
+      clearInterval(iv); return;
+    }
+    var d=Math.floor(diff/864e5), h=Math.floor(diff%864e5/36e5), m=Math.floor(diff%36e5/6e4), s=Math.floor(diff%6e4/1e3);
+    el.innerHTML = '<b>'+d+'</b>d <b>'+('0'+h).slice(-2)+'</b>h <b>'+('0'+m).slice(-2)+'</b>m <b>'+('0'+s).slice(-2)+'</b>s';
+  }
+  tick(); var iv=setInterval(tick,1000);
+})();
+</script>
+
 <header class="topbar" id="hdr">
   <div class="topbar-inner">
     <div class="topbar-logos">
@@ -218,11 +257,12 @@ section{padding:100px 0}
         <p>O encontro da medicina com a nutrição moderna. Endocrinologia, nutrologia e a fronteira clínica do emagrecimento.</p>
         <span class="ghost">Ver palestrantes →</span>
       </a>
-      <a class="mod-card" href="/programacao/corrida-de-rua">
-        <span class="mod-tag">Movimento · 29 ago</span>
-        <h3>Corrida de Rua</h3>
-        <p>Nutrição aplicada à corrida e ao esporte de resistência, conectando ciência e a NB Run.</p>
-        <span class="ghost">Ver palestrantes →</span>
+      <a class="mod-card" href="/programacao/nb-universitario" style="position:relative;border:2px solid var(--blue)">
+        <span style="position:absolute;top:-12px;left:24px;background:var(--blue);color:var(--purple-deep);font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;padding:5px 14px;border-radius:30px">✦ Novidade</span>
+        <span class="mod-tag">Nova geração · 29 ago</span>
+        <h3>NB Universitário</h3>
+        <p>O consultório que você vai encontrar já não é o dos livros. A nova geração dentro do maior evento de nutrição do Brasil — a partir de 12x de R$ 10,03.</p>
+        <span class="ghost">Ver programação →</span>
       </a>
     </div>
   </div>

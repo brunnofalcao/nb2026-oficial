@@ -245,6 +245,26 @@ section{padding:100px 0}
 #lote-bar .lb-close:hover{opacity:1}
 #lote-bar.lb-ended{background:#1a0f2e}
 @media(max-width:600px){#lote-bar{font-size:12.5px;padding:8px 40px 8px 12px;gap:6px}#lote-bar .lb-count b{padding:2px 5px;min-width:24px}}
+
+/* ===== NB UNIVERSITÁRIO (novidade) ===== */
+.nbu{background:var(--white);padding:90px 0}
+.nbu-box{background:var(--purple-deep);background-image:radial-gradient(ellipse 70% 90% at 85% 10%,rgba(128,192,255,.22),transparent),radial-gradient(ellipse 60% 80% at 10% 100%,rgba(111,77,137,.5),transparent);border-radius:28px;padding:56px 54px;display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:center;color:#fff;position:relative;overflow:hidden}
+.nbu-badge{display:inline-block;background:var(--blue);color:var(--purple-deep);font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:7px 16px;border-radius:30px;margin-bottom:20px}
+.nbu-txt h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(28px,3.4vw,42px);line-height:1.16;color:#fff;margin-bottom:16px}
+.nbu-txt h2 em{font-style:italic;color:var(--blue)}
+.nbu-sub{color:#cfc6dd;font-size:16px;line-height:1.7;margin-bottom:20px}
+.nbu-list{list-style:none;margin:0;padding:0}
+.nbu-list li{color:#e6e0f0;font-size:14.5px;padding:5px 0 5px 26px;position:relative}
+.nbu-list li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.nbu-cta{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:32px 28px;text-align:center}
+.nbu-price{margin-bottom:18px}
+.nbu-price span{display:block;font-size:13px;color:#a99cc0;font-weight:600}
+.nbu-price em{display:block;font-style:normal;font-family:'Instrument Serif',serif;font-size:46px;color:var(--blue);line-height:1.1;margin:4px 0}
+.nbu-price sup{font-size:16px}
+.nbu-cta .btn-primary{width:100%;justify-content:center;margin-bottom:12px}
+.nbu-ghost{display:block;color:#cfc6dd;font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+.nbu-ghost:hover{color:#fff}
+@media(max-width:860px){.nbu{padding:64px 0}.nbu-box{grid-template-columns:1fr;padding:38px 26px;gap:28px}}
 </style>
 <!-- Microsoft Clarity — heatmaps + session replay. Trocar xk8p8zm744 pelo ID gerado em clarity.microsoft.com -->
 <script type="text/javascript">
@@ -380,6 +400,29 @@ section{padding:100px 0}
 </section>
 
 <!-- EXPERIÊNCIA -->
+
+<!-- NB UNIVERSITÁRIO — NOVIDADE -->
+<section class="nbu" id="nb-universitario">
+  <div class="container">
+    <div class="nbu-box">
+      <div class="nbu-txt">
+        <span class="nbu-badge">✦ Novidade · 29 de agosto</span>
+        <h2>O consultório que você vai encontrar <em>já não é o dos livros.</em></h2>
+        <p class="nbu-sub"><strong>NB Universitário</strong>: a nova geração dentro do maior evento de nutrição do Brasil. Um dia inteiro de esporte, comportamento, saúde da mulher, mercado — e a mesa redonda sobre a mudança geracional que já chegou aos consultórios.</p>
+        <ul class="nbu-list">
+          <li>7 palestrantes confirmados + mesa redonda</li>
+          <li>Dentro da estrutura do Ulysses Guimarães, junto com o congresso</li>
+          <li>Feito para estudantes e recém-formados</li>
+        </ul>
+      </div>
+      <div class="nbu-cta">
+        <div class="nbu-price"><span>12x de</span><em>R$ 10,03<sup>*</sup></em><span>ou R$ 97 à vista</span></div>
+        <a class="btn-primary" href="https://pay.hotmart.com/W104530405N?off=moxeuvdg&bid=1784602545333" target="_blank" rel="noopener" onclick="track_checkout('home-nb-universitario')">Garantir minha vaga →</a>
+        <a class="nbu-ghost" href="/programacao/nb-universitario">Ver programação completa</a>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="exp">
   <div class="container center">
     <span class="section-label"><span class="line"></span>Duas formas de viver o Nutrição Brasil</span>
