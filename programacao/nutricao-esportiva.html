@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nutrição Esportiva 2026 | Módulo do Nutrição Brasil</title>
-<meta name="description" content="Performance, composição corporal e estratégia prática com as maiores referências da nutrição esportiva. 28 de agosto, Brasília. 1º lote R$ 247.">
+<meta name="description" content="Performance, composição corporal e estratégia prática com as maiores referências da nutrição esportiva. 28 de agosto, Brasília. 2º lote R$ 277.">
 <link rel="canonical" href="https://www.nutricaobrasil.com.br/programacao/nutricao-esportiva">
 <meta name="geo.region" content="BR-DF"><meta name="geo.placename" content="Brasília">
 <meta property="og:type" content="website">
@@ -181,6 +181,16 @@ section{padding:100px 0}
 .ag-row.tbd .ag-spk,.ag-row.tbd .ag-talk{color:var(--gray-400);font-style:italic}
 .agenda-note{max-width:860px;margin:8px auto 0;font-size:13px;color:var(--gray-400);text-align:center}
 @media(max-width:768px){.ag-row{grid-template-columns:1fr;gap:4px;padding:14px}.ag-time{font-size:12px}.agenda-day-head .d{font-size:26px}}
+
+/* ===== BARRA VIRADA DE LOTE ===== */
+#lote-bar{position:relative;z-index:60;background:linear-gradient(90deg,#6f4d89,#8B5FB5 55%,#80c0ff);color:#fff;text-align:center;padding:9px 44px 9px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.35;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+#lote-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px;font-weight:800;white-space:nowrap}
+#lote-bar .lb-count{display:inline-flex;gap:5px;align-items:center;font-variant-numeric:tabular-nums}
+#lote-bar .lb-count b{background:rgba(255,255,255,.18);border-radius:6px;padding:2px 7px;font-weight:800;min-width:30px;display:inline-block}
+#lote-bar .lb-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#fff;font-size:17px;cursor:pointer;opacity:.8;line-height:1;padding:4px}
+#lote-bar .lb-close:hover{opacity:1}
+#lote-bar.lb-ended{background:#1a0f2e}
+@media(max-width:600px){#lote-bar{font-size:12.5px;padding:8px 40px 8px 12px;gap:6px}#lote-bar .lb-count b{padding:2px 5px;min-width:24px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.nutricaobrasil.com.br/"},{"@type":"ListItem","position":2,"name":"Programação","item":"https://www.nutricaobrasil.com.br/programacao"},{"@type":"ListItem","position":3,"name":"Nutrição Esportiva","item":"https://www.nutricaobrasil.com.br/programacao/nutricao-esportiva"}]}
@@ -195,6 +205,35 @@ section{padding:100px 0}
 </script>
 </head>
 <body>
+<!-- BARRA VIRADA DE LOTE -->
+<div id="lote-bar" role="status">
+  <span>⏳ <strong>2º lote encerra em breve</strong> — depois de <b style="font-weight:800">13/08</b> o preço sobe.</span>
+  <span class="lb-count" id="lbCount" aria-label="tempo restante"></span>
+  <a href="/ingressos" onclick="try{track_checkout('lote-bar')}catch(e){}">Garantir 2º lote →</a>
+  <button class="lb-close" aria-label="Fechar" onclick="document.getElementById('lote-bar').style.display='none'">×</button>
+</div>
+<script>
+(function(){
+  // 20 de julho de 2026, 23:59:59 — horário de Brasília (UTC-3)
+  var deadline = new Date('2026-08-13T23:59:59-03:00').getTime();
+  var el = document.getElementById('lbCount');
+  var bar = document.getElementById('lote-bar');
+  if(!el) return;
+  function tick(){
+    var diff = deadline - Date.now();
+    if(diff <= 0){
+      bar.classList.add('lb-ended');
+      bar.querySelector('span').innerHTML = '🔥 <strong>2º lote encerrado.</strong> Garanta agora antes da próxima virada.';
+      el.innerHTML='';
+      clearInterval(iv); return;
+    }
+    var d=Math.floor(diff/864e5), h=Math.floor(diff%864e5/36e5), m=Math.floor(diff%36e5/6e4), s=Math.floor(diff%6e4/1e3);
+    el.innerHTML = '<b>'+d+'</b>d <b>'+('0'+h).slice(-2)+'</b>h <b>'+('0'+m).slice(-2)+'</b>m <b>'+('0'+s).slice(-2)+'</b>s';
+  }
+  tick(); var iv=setInterval(tick,1000);
+})();
+</script>
+
 <header class="topbar" id="hdr">
   <div class="topbar-inner">
     <div class="topbar-logos">
@@ -272,9 +311,9 @@ section{padding:100px 0}
 </section>
 <section class="cta-final">
   <div class="container center">
-    <span class="section-label"><span class="line"></span>1º Lote aberto</span>
+    <span class="section-label"><span class="line"></span>2º Lote aberto</span>
     <h2 class="section-title">Sua vaga está <em>esperando</em></h2>
-    <p class="section-intro" style="margin:0 auto 32px">Preço de 1º lote por tempo limitado. Quando vira o lote, o valor sobe.</p>
+    <p class="section-intro" style="margin:0 auto 32px">Preço de 2º lote por tempo limitado. Quando vira o lote, o valor sobe.</p>
     <a href="/ingressos" class="btn-primary" onclick="track_checkout('nutricao-esportiva-final')">Garantir minha vaga →</a>
   </div>
 </section>
@@ -322,7 +361,7 @@ section{padding:100px 0}
   </div>
 </footer>
 <div class="sticky-cta">
-  <div class="sc-price">A partir de<em>R$ 247</em></div>
+  <div class="sc-price">A partir de<em>R$ 277</em></div>
   <a href="/ingressos" onclick="track_checkout('sticky')">Garantir vaga →</a>
 </div>
 <script>

@@ -177,15 +177,15 @@ section{padding:100px 0}
 <body>
 <!-- BARRA VIRADA DE LOTE -->
 <div id="lote-bar" role="status">
-  <span>⏳ <strong>1º lote encerra em breve</strong> — depois de <b style="font-weight:800">20/07</b> o preço sobe.</span>
+  <span>⏳ <strong>2º lote encerra em breve</strong> — depois de <b style="font-weight:800">13/08</b> o preço sobe.</span>
   <span class="lb-count" id="lbCount" aria-label="tempo restante"></span>
-  <a href="/ingressos" onclick="try{track_checkout('lote-bar')}catch(e){}">Garantir 1º lote →</a>
+  <a href="/ingressos" onclick="try{track_checkout('lote-bar')}catch(e){}">Garantir 2º lote →</a>
   <button class="lb-close" aria-label="Fechar" onclick="document.getElementById('lote-bar').style.display='none'">×</button>
 </div>
 <script>
 (function(){
   // 20 de julho de 2026, 23:59:59 — horário de Brasília (UTC-3)
-  var deadline = new Date('2026-07-20T23:59:59-03:00').getTime();
+  var deadline = new Date('2026-08-13T23:59:59-03:00').getTime();
   var el = document.getElementById('lbCount');
   var bar = document.getElementById('lote-bar');
   if(!el) return;
@@ -193,7 +193,7 @@ section{padding:100px 0}
     var diff = deadline - Date.now();
     if(diff <= 0){
       bar.classList.add('lb-ended');
-      bar.querySelector('span').innerHTML = '🔥 <strong>Lote 1 encerrado.</strong> Garanta agora antes da próxima virada.';
+      bar.querySelector('span').innerHTML = '🔥 <strong>2º lote encerrado.</strong> Garanta agora antes da próxima virada.';
       el.innerHTML='';
       clearInterval(iv); return;
     }
