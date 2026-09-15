@@ -262,7 +262,7 @@ footer{background:var(--deep);border-top:1px solid var(--line)}
 @media(max-width:860px){html,body{overflow-x:hidden}header>div{flex-wrap:wrap!important;row-gap:6px!important;padding:12px 16px!important}header nav{order:3!important;width:100%!important;flex-wrap:nowrap!important;justify-content:flex-start!important;gap:22px!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}}
 </style>
 </head>
-<body><div id="alerta-lote" style="background:linear-gradient(90deg,rgba(224,179,161,.22),rgba(224,179,161,.08));border-bottom:1px solid rgba(224,179,161,.6);padding:11px 16px;text-align:center"><span style="display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;color:#e0b3a1;font:800 12.5px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.4px;text-transform:uppercase"><span style="width:7px;height:7px;border-radius:50%;background:#e0b3a1;flex:0 0 auto;animation:nbPulse 2s infinite"></span>Últimas vagas · 80% da sala preenchida · inscrições até 19 de setembro<span data-ticker style="background:#e0b3a1;color:#1A0F2E;padding:4px 11px;border-radius:100px">calculando</span><a data-checkout href="#oferta" style="color:#fff;text-decoration:underline;text-underline-offset:3px">Garantir vaga</a></span></div>
+<body><div id="alerta-lote" style="background:linear-gradient(90deg,rgba(224,179,161,.22),rgba(224,179,161,.08));border-bottom:1px solid rgba(224,179,161,.6);padding:11px 16px;text-align:center"><span style="display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;color:#e0b3a1;font:800 12.5px/1.5 Arial,Helvetica,sans-serif;letter-spacing:.4px;text-transform:uppercase"><span style="width:7px;height:7px;border-radius:50%;background:#e0b3a1;flex:0 0 auto;animation:nbPulse 2s infinite"></span>É neste sábado, 19 de setembro · 80% da sala preenchida<span data-ticker style="background:#e0b3a1;color:#1A0F2E;padding:4px 11px;border-radius:100px">calculando</span><a data-checkout href="#oferta" style="color:#fff;text-decoration:underline;text-underline-offset:3px">Garantir vaga</a></span></div>
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(13,6,24,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #3a2a52">
   <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px">
@@ -287,7 +287,7 @@ footer{background:var(--deep);border-top:1px solid var(--line)}
 <div class="hero-g">
 
 <div>
-<span class="kicker"><span class="dot"></span>Últimas vagas</span>
+<span class="kicker"><span class="dot"></span>Últimas vagas · é neste sábado</span>
 <h1 class="h1">A nutrição do Brasil chega a <span class="serif" style="color:var(--azul)">Belém</span>.</h1>
 <p class="lead" style="margin:0 0 20px;max-width:560px">Um dia inteiro sobre o novo corpo: <strong style="color:#fff;font-weight:700">metabólico, mental e muscular</strong>. Não é uma versão regional adaptada, é a operação nacional inteira, no Norte.</p>
 <div class="facts">
@@ -445,7 +445,7 @@ footer{background:var(--deep);border-top:1px solid var(--line)}
 <div class="final-veil"></div>
 <div class="wrap pad final-in">
 <h2 class="h2b">O Norte entrou no calendário. <span class="serif">Entre com ele.</span></h2>
-<p><span data-preco-vista>R$ 597</span> no último lote, em até 12x..</p>
+<p><span data-preco-vista>R$ 597</span> no último lote, em até 12x..</p><p style="margin:-10px 0 22px;color:#e0b3a1;font-size:14.5px;font-weight:800;letter-spacing:.3px">Faltam poucos dias e 80% da sala já está preenchida. Depois de sábado, só no ano que vem.</p>
 <div class="ctas" style="max-width:520px">
 <a class="btn btn-p" data-checkout href="#oferta">Garantir minha vaga →</a>
 <a class="btn btn-s" target="_blank" rel="noopener" href="https://wa.me/5561998318817">Falar no WhatsApp</a>
@@ -614,7 +614,7 @@ else if(btnDupla){
         d=Math.floor(ms/864e5), h=Math.floor(ms/36e5)%24, m=Math.floor(ms/6e4)%60, s=Math.floor(ms/1e3)%60;
     setAll("[data-cd-d]",z(d));setAll("[data-cd-h]",z(h));setAll("[data-cd-m]",z(m));setAll("[data-cd-s]",z(s));
     setAll("[data-ticker]",d>0?"Últimas vagas · "+d+"d "+z(h)+"h":"Últimas vagas · "+z(h)+"h "+z(m)+"m");
-    setAll("[data-stick-nota]",d>0?"Últimas vagas · "+d+"d":"Último lote promocional");
+    setAll("[data-stick-nota]",d>0?"Últimas vagas · faltam "+d+"d":"Último lote promocional");
   }
   tick(); setInterval(tick,1000);
 })();
