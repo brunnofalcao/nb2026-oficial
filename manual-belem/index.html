@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080014">
+<meta name="description" content="Manual do Congressista · Nutrição Brasil Belém 2026. Programação, endereço, restaurantes, regras e suporte. 19 de setembro, Hotel Sagres, Salão Atlântico Sul.">
+<meta property="og:title" content="Manual do Congressista · Nutrição Brasil Belém 2026">
+<meta property="og:description" content="19 de setembro · Hotel Sagres · Belém. Programação, endereço, restaurantes, suporte. Tudo num só lugar.">
+<meta property="og:image" content="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png">
+<meta property="og:type" content="website">
+<title>Manual do Congressista · Nutrição Brasil Belém 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#080014; --bg-card:#12072a; --bg-elev:#1a0e38;
+  --bd:#2a1a4c; --bd-soft:#1f1240;
+  --t1:#ffffff; --t2:#cfc1ea; --t3:#8c7cad; --t4:#5d4f7a;
+  --roxo:#a374cf; --roxo-2:#8b5fbf;
+  --cyan:#80c0ff; --nude:#e0b3a1; --gold:#ffc800;
+  --radius-sm:8px; --radius:14px; --radius-lg:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--t1);overflow-x:hidden}
+body{
+  font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:15px;line-height:1.55;letter-spacing:-0.005em;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  min-height:100vh;padding-bottom:88px;
+}
+.app{max-width:520px;margin:0 auto;background:var(--bg);position:relative;min-height:100vh}
+
+/* TOPBAR */
+.topbar{
+  position:sticky;top:0;z-index:50;background:rgba(8,0,20,.92);
+  backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid var(--bd-soft);padding:12px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.topbar .logo{height:18px;width:auto;opacity:.95}
+.topbar .date{font-size:11px;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.topbar .pulse{display:inline-block;width:7px;height:7px;background:var(--nude);border-radius:50%;margin-right:6px;animation:pulse 2s ease-in-out infinite;vertical-align:middle;position:relative;top:-1px}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}
+
+/* HERO */
+.hero{
+  padding:42px 22px 36px;text-align:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%,rgba(139,95,191,.22),transparent 70%),
+    radial-gradient(ellipse 80% 40% at 50% 100%,rgba(224,179,161,.10),transparent 60%),
+    var(--bg);
+}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle at 20% 30%,rgba(224,179,161,.05) 0,transparent 40%),radial-gradient(circle at 80% 70%,rgba(128,192,255,.04) 0,transparent 40%)}
+.hero-eyebrow{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--nude);background:rgba(224,179,161,.08);border:1px solid rgba(224,179,161,.25);padding:5px 11px;border-radius:100px;margin-bottom:22px;font-weight:700;position:relative;z-index:1}
+.hero h1{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:46px;line-height:.98;letter-spacing:-0.025em;margin-bottom:14px;position:relative;z-index:1}
+.hero h1 em{font-style:italic;color:var(--nude)}
+.hero-sub{font-size:14.5px;color:var(--t2);margin:0 auto 26px;max-width:350px;line-height:1.5;position:relative;z-index:1}
+.hero-date{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:8px;position:relative;z-index:1}
+.hero-date .num{font-family:'Instrument Serif',serif;font-size:64px;line-height:1;font-style:italic;color:var(--roxo);letter-spacing:-0.02em}
+.hero-date .month{font-size:12px;color:var(--t3);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:28px;padding:14px 24px 14px 26px;background:linear-gradient(135deg,rgba(163,116,207,.2),rgba(139,95,191,.12));border:1px solid rgba(163,116,207,.4);border-radius:100px;color:var(--t1);font-family:inherit;font-size:14px;font-weight:600;text-decoration:none;position:relative;z-index:1;transition:all .25s ease}
+.hero-cta:hover{border-color:rgba(224,179,161,.45);color:var(--nude)}
+.hero-cta:active{transform:scale(.97)}
+.hero-cta-arrow{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--nude);color:#2a1206;border-radius:50%;font-size:13px;font-weight:800;line-height:1;margin-left:-2px;animation:bounce 2.2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+#programacao{scroll-margin-top:68px}
+
+/* COUNTDOWN */
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--bd-soft);border:1px solid var(--bd);border-radius:var(--radius);margin:24px 22px 0;overflow:hidden}
+.countdown > div{padding:16px 4px;text-align:center;background:var(--bg-card)}
+.countdown .cn{font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;color:var(--nude);line-height:1}
+.countdown .cl{font-size:9px;color:var(--t3);letter-spacing:.14em;text-transform:uppercase;margin-top:6px;font-weight:600}
+.countdown-note{text-align:center;font-size:10px;color:var(--t4);letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:10px}
+
+/* SECTION */
+.section{padding:36px 22px;border-top:1px solid var(--bd-soft)}
+.section-tag{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--roxo);font-weight:700;margin-bottom:10px}
+.section h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:32px;line-height:1.05;letter-spacing:-0.02em;margin-bottom:8px}
+.section h2 em{font-style:italic;color:var(--nude)}
+.section-lead{font-size:14.5px;color:var(--t2);margin-bottom:24px;line-height:1.55}
+
+/* FACTS */
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 22px;margin-top:-4px;margin-bottom:8px}
+.fact{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:18px 16px}
+.fact-icon{font-size:18px;margin-bottom:10px;display:block}
+.fact-label{font-size:10px;color:var(--t3);letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+.fact-value{font-size:15px;color:var(--t1);font-weight:600;line-height:1.25}
+.fact-value small{font-size:12px;color:var(--t3);font-weight:500;display:block;margin-top:2px}
+
+/* NUMBERS */
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--bd);margin:24px 22px 0;overflow:hidden}
+.numbers > div{padding:18px 6px;text-align:center;background:var(--bg-card)}
+.numbers .n{font-family:'Instrument Serif',serif;font-style:italic;font-size:28px;color:var(--roxo);line-height:1}
+.numbers .l{font-size:9px;color:var(--t3);letter-spacing:.14em;text-transform:uppercase;margin-top:6px;font-weight:600}
+
+/* ALERT */
+.alert{background:linear-gradient(165deg,rgba(255,107,107,.08),rgba(255,200,0,.04));border:1px solid rgba(255,200,0,.25);border-radius:var(--radius);padding:18px 18px 18px 16px;display:flex;gap:14px;align-items:flex-start}
+.alert-bullet{width:6px;flex-shrink:0;background:var(--gold);align-self:stretch;border-radius:3px;margin:2px 0}
+.alert-title{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.alert-text{font-size:14px;color:var(--t1);line-height:1.5}
+.alert-text strong{font-weight:700}
+.alert-text em{font-style:normal;color:var(--gold);font-weight:600}
+
+/* CHECKLIST INTERATIVO */
+.progress-wrap{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:16px 18px;margin-bottom:12px}
+.progress-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
+.progress-label{font-size:11px;color:var(--t3);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.progress-count{font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:var(--nude);line-height:1}
+.progress-bar{height:6px;background:var(--bd-soft);border-radius:100px;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--roxo),var(--nude));border-radius:100px;transition:width .4s cubic-bezier(.4,.2,.2,1)}
+.checklist{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:8px 4px}
+.check-item{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-bottom:1px solid var(--bd-soft);cursor:pointer}
+.check-item:last-child{border-bottom:none}
+.check-icon{width:28px;height:28px;flex-shrink:0;background:rgba(139,95,191,.12);border:1px solid rgba(139,95,191,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:transparent;font-size:13px;font-weight:700;transition:all .2s ease}
+.check-item.on .check-icon{background:var(--nude);border-color:var(--nude);color:#2a1206}
+.check-item.on .check-body strong{color:var(--t3);text-decoration:line-through}
+.check-body strong{display:block;font-size:14.5px;color:var(--t1);font-weight:600;margin-bottom:2px;transition:all .2s}
+.check-body span{font-size:13px;color:var(--t3);line-height:1.45}
+
+/* LOCALE */
+.locale{background:linear-gradient(165deg,var(--bg-elev),var(--bg-card));border:1px solid var(--bd);border-radius:var(--radius);padding:22px 20px;position:relative;overflow:hidden}
+.locale::before{content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(224,179,161,.10),transparent 70%);border-radius:50%}
+.locale-venue{font-family:'Instrument Serif',serif;font-size:25px;line-height:1.15;font-style:italic;margin-bottom:6px;position:relative}
+.locale-venue .where{color:var(--nude)}
+.locale-addr{font-size:14px;color:var(--t2);line-height:1.5;margin-bottom:18px;position:relative}
+.locale-addr strong{color:var(--t1);font-weight:600;display:block;margin-bottom:2px}
+.locale-actions{display:flex;gap:8px;position:relative}
+.btn-ghost{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 10px;background:rgba(139,95,191,.12);border:1px solid var(--bd);border-radius:10px;color:var(--t1);font-size:13px;font-weight:600;text-decoration:none}
+.btn-ghost:active{transform:scale(.97)}
+
+/* PROGRAMACAO */
+.schedule-block{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+.schedule-head{width:100%;text-align:left;background:none;border:none;padding:18px;color:var(--t1);font-family:inherit;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.schedule-head-left{display:flex;align-items:center;gap:14px;min-width:0}
+.schedule-icon{width:38px;height:38px;flex-shrink:0;border-radius:50%;background:rgba(139,95,191,.15);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:16px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--nude)}
+.schedule-period{font-family:'Instrument Serif',serif;font-style:italic;font-size:21px;line-height:1.15;letter-spacing:-0.01em}
+.schedule-meta{font-size:11px;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;font-weight:600}
+.schedule-toggle{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:var(--bg-elev);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;color:var(--nude);font-size:14px;transition:transform .25s ease}
+.schedule-toggle::before{content:'+'}
+.schedule-block[open] .schedule-toggle{transform:rotate(45deg);color:var(--gold)}
+.schedule-body{padding:6px 18px 18px;border-top:1px solid var(--bd-soft)}
+.session{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--bd-soft)}
+.session:last-child{border-bottom:none;padding-bottom:4px}
+.session-time{flex-shrink:0;width:50px;font-family:'Instrument Serif',serif;font-style:italic;font-size:16px;color:var(--nude);line-height:1.2;padding-top:1px}
+.session-content{flex:1;min-width:0}
+.session-speaker{font-size:13px;color:var(--roxo);font-weight:700;margin-bottom:3px}
+.session-title{font-size:14px;color:var(--t1);line-height:1.45;font-weight:500}
+.session-title strong{font-weight:700}
+.session.break{background:rgba(255,200,0,.04);border-radius:10px;padding:12px 14px;margin:6px 0;border:1px dashed rgba(255,200,0,.2)}
+.session.break .session-title{color:var(--gold);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.session.break .session-speaker{display:none}
+.session.break .session-time{color:var(--gold)}
+.session.closing{background:rgba(139,95,191,.08);border-radius:10px;padding:12px 14px;margin-top:6px;border:1px solid rgba(139,95,191,.2)}
+.session.closing .session-time{color:var(--roxo)}
+
+/* CARDS */
+.included{display:grid;grid-template-columns:1fr;gap:10px}
+.incl-card{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:18px 18px 18px 64px;position:relative}
+.incl-icon{position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:8px;background:rgba(139,95,191,.15);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:16px}
+.incl-title{font-size:15px;color:var(--t1);font-weight:700;margin-bottom:3px}
+.incl-desc{font-size:13px;color:var(--t3);line-height:1.45}
+
+/* POI */
+.poi-card{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:15px 18px;margin-bottom:9px;display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit}
+.poi-card:active{transform:scale(.99)}
+.poi-icon{width:40px;height:40px;flex-shrink:0;border-radius:10px;background:rgba(139,95,191,.12);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:17px}
+.poi-body{flex:1;min-width:0}
+.poi-name{font-size:14.5px;color:var(--t1);font-weight:700;margin-bottom:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.poi-name .badge{font-size:9px;background:var(--nude);color:#2a1206;padding:2px 7px;border-radius:100px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.poi-addr{font-size:12px;color:var(--t3);line-height:1.4}
+.poi-dist{flex-shrink:0;font-family:'Instrument Serif',serif;font-style:italic;font-size:17px;color:var(--nude);line-height:1;text-align:right}
+.poi-dist small{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-style:normal;font-size:9px;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-top:3px;font-weight:600}
+
+/* VIP */
+.vip-block{background:linear-gradient(165deg,rgba(255,200,0,.13),rgba(255,200,0,.03));border:1px solid rgba(255,200,0,.35);border-radius:var(--radius);padding:24px 20px;position:relative;overflow:hidden}
+.vip-block::before{content:'';position:absolute;top:-50px;right:-50px;width:190px;height:190px;background:radial-gradient(circle,rgba(255,200,0,.16),transparent 70%);border-radius:50%}
+.vip-eyebrow{display:inline-block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);background:rgba(255,200,0,.1);border:1px solid rgba(255,200,0,.35);padding:5px 12px;border-radius:100px;margin-bottom:16px;font-weight:700;position:relative}
+.vip-title{font-family:'Instrument Serif',serif;font-size:28px;line-height:1.08;letter-spacing:-0.02em;margin-bottom:12px;position:relative}
+.vip-title em{font-style:italic;color:var(--gold)}
+.vip-desc{font-size:14px;color:var(--t2);line-height:1.55;position:relative}
+.vip-desc strong{color:var(--t1);font-weight:600}
+.vip-meta{display:flex;gap:8px;margin-top:16px;position:relative}
+.vip-meta > div{flex:1;background:rgba(8,0,20,.45);border:1px solid rgba(255,200,0,.2);border-radius:var(--radius-sm);padding:12px 8px;text-align:center}
+.vip-meta .vv{font-family:'Instrument Serif',serif;font-style:italic;font-size:19px;color:var(--gold);line-height:1.2}
+.vip-meta .vl{font-size:9px;color:var(--t3);letter-spacing:.12em;text-transform:uppercase;margin-top:5px;font-weight:600}
+
+/* RULES */
+.rules{background:var(--bg-card);border:1px solid var(--bd);border-radius:var(--radius);padding:6px 4px}
+.rule{display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid var(--bd-soft);align-items:flex-start}
+.rule:last-child{border-bottom:none}
+.rule-num{width:24px;height:24px;flex-shrink:0;border-radius:50%;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-style:italic;color:var(--nude);font-size:13px;margin-top:1px}
+.rule-text{font-size:14px;color:var(--t1);line-height:1.5}
+.rule-text strong{color:var(--nude);font-weight:700}
+
+/* PREMIO */
+.prize-block{background:linear-gradient(165deg,rgba(224,179,161,.14),rgba(224,179,161,.04));border:1px solid rgba(224,179,161,.35);border-radius:var(--radius);padding:26px 22px;text-align:center;position:relative;overflow:hidden}
+.prize-block::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(224,179,161,.18),transparent 70%);border-radius:50%}
+.prize-eyebrow{display:inline-block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--nude);background:rgba(224,179,161,.1);border:1px solid rgba(224,179,161,.35);padding:5px 12px;border-radius:100px;margin-bottom:18px;font-weight:700;position:relative}
+.prize-title{font-family:'Instrument Serif',serif;font-size:30px;line-height:1.05;letter-spacing:-0.02em;margin-bottom:14px;position:relative}
+.prize-title em{font-style:italic;color:var(--nude)}
+.prize-handle{display:inline-block;margin:6px 0 14px;background:rgba(224,179,161,.12);border:1px solid rgba(224,179,161,.4);padding:10px 18px;border-radius:100px;font-size:15px;font-weight:700;color:var(--nude);text-decoration:none;position:relative}
+.prize-handle:active{transform:scale(.97)}
+.prize-handle .at{opacity:.6;margin-right:1px}
+.prize-desc{font-size:14px;color:var(--t2);line-height:1.55;max-width:350px;margin:0 auto;position:relative}
+.prize-desc strong{color:var(--t1);font-weight:600}
+.btn-solid{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:18px;padding:14px 20px;background:var(--nude);color:#2a1206;border-radius:12px;font-family:inherit;font-size:14.5px;font-weight:700;text-decoration:none;position:relative}
+.btn-solid:active{transform:scale(.98)}
+.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:10px;padding:14px 20px;background:transparent;border:1px solid var(--bd);color:var(--t1);border-radius:12px;font-family:inherit;font-size:14px;font-weight:600;text-decoration:none}
+
+/* CONTACT */
+.contact-card{background:linear-gradient(165deg,var(--bg-elev),var(--bg-card));border:1px solid var(--bd);border-radius:var(--radius);padding:24px 20px;text-align:center}
+.contact-eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--roxo);font-weight:700;margin-bottom:10px}
+.contact-title{font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;line-height:1.15;margin-bottom:8px}
+.contact-sub{font-size:13.5px;color:var(--t2);margin-bottom:18px;line-height:1.5}
+.contact-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px 20px;background:#25D366;color:#062f15;border-radius:12px;font-family:inherit;font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,.25)}
+.contact-btn:active{transform:scale(.98)}
+.contact-btn svg{width:18px;height:18px;flex-shrink:0}
+.contact-phone{margin-top:16px;padding-top:16px;border-top:1px solid var(--bd-soft);display:flex;flex-direction:column;align-items:center;gap:4px}
+.contact-phone-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);font-weight:600}
+.contact-phone-num{font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:var(--nude);text-decoration:none}
+
+/* SHARE */
+.share-block{background:var(--bg-card);border:1px solid var(--bd);border-left:3px solid var(--roxo);border-radius:var(--radius);padding:22px 20px;text-align:center}
+.share-title{font-family:'Instrument Serif',serif;font-size:23px;line-height:1.15;margin-bottom:8px}
+.share-sub{font-size:13.5px;color:var(--t2);line-height:1.5;margin-bottom:16px}
+
+/* FOOTER */
+.footer{padding:32px 22px 24px;text-align:center;border-top:1px solid var(--bd-soft);background:#03000a}
+.footer img{height:24px;opacity:.7;margin-bottom:14px}
+.footer-text{font-size:11px;color:var(--t4);line-height:1.6}
+.footer-text strong{color:var(--t3);font-weight:600;display:block;margin-bottom:4px}
+
+/* STICKY */
+.sticky-cta{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:calc(100% - 32px);max-width:488px;z-index:60;display:flex;gap:8px;align-items:center;background:rgba(8,0,20,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid var(--bd);padding:7px 7px 7px 16px;border-radius:100px;box-shadow:0 10px 32px rgba(0,0,0,.5)}
+.sticky-cta-text{flex:1;min-width:0}
+.sticky-cta-text strong{display:block;font-size:13px;color:var(--t1);font-weight:700;line-height:1.2}
+.sticky-cta-text span{font-size:11px;color:var(--t3)}
+.sticky-cta-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#062f15;font-family:inherit;font-size:13px;font-weight:700;padding:10px 16px;border-radius:100px;text-decoration:none;flex-shrink:0}
+.sticky-cta-btn svg{width:14px;height:14px}
+
+details summary{list-style:none;outline:none}
+details summary::-webkit-details-marker{display:none}
+
+
+/* ============ BAG EXPERIENCE ============ */
+.bag-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:14px}
+.bag-photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;display:block}
+.bag-note{background:var(--bg-card);border:1px solid var(--bd);border-left:3px solid var(--nude);border-radius:var(--radius);padding:16px 18px;margin-top:14px;font-size:13.5px;color:var(--t2);line-height:1.55}
+.bag-note strong{color:var(--t1);font-weight:600}
+
+@media (prefers-reduced-motion: no-preference){.section{animation:fadein .6s ease both}}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+@media (min-width:521px){
+  body{background:#03000a}
+  .app{box-shadow:0 0 0 1px var(--bd-soft),0 20px 60px rgba(0,0,0,.5)}
+}
+@media print{body{background:#fff!important;color:#000!important}.topbar,.footer{background:#fff!important}a{color:#000!important;text-decoration:none}a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#555}*{box-shadow:none!important}.no-print{display:none!important}section,article{page-break-inside:avoid}}
+</style>
+<link rel="canonical" href="https://www.nutricaobrasil.com.br/manual-belem">
+<meta property="og:url" content="https://www.nutricaobrasil.com.br/manual-belem">
+<!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y2HLCV0V0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-8Y2HLCV0V0');</script>
+<!-- Meta Pixel --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','460696430970324');fbq('track','PageView');</script>
+<!-- Clarity --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xk8p8zm744");</script>
+</head>
+<body>
+
+<div class="app">
+
+<header class="topbar">
+  <img class="logo" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775583229/nb_logotipo_hor_05_wqsydv.png" alt="Nutrição Brasil">
+  <div class="date"><span class="pulse"></span>19 · SET · BELÉM</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">★ Manual do Congressista</div>
+  <h1>Tudo que você<br>precisa <em>antes</em><br>do evento.</h1>
+  <p class="hero-sub">Endereço, programação, restaurantes próximos, regras e suporte. Um lugar só, para você chegar pronto.</p>
+  <div class="hero-date">
+    <div class="num">19</div>
+    <div class="month">Setembro · Sábado · 2026</div>
+  </div>
+  <a class="hero-cta" href="#programacao">
+    Ver programação completa
+    <span class="hero-cta-arrow">↓</span>
+  </a>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown">
+  <div><div class="cn" id="cd-d">--</div><div class="cl">Dias</div></div>
+  <div><div class="cn" id="cd-h">--</div><div class="cl">Horas</div></div>
+  <div><div class="cn" id="cd-m">--</div><div class="cl">Min</div></div>
+  <div><div class="cn" id="cd-s">--</div><div class="cl">Seg</div></div>
+</div>
+<div class="countdown-note" id="cd-note">Para a abertura do credenciamento</div>
+
+<!-- FACTS -->
+<div class="facts">
+  <div class="fact">
+    <span class="fact-icon">📅</span>
+    <div class="fact-label">Data</div>
+    <div class="fact-value">19 · Setembro<small>Sábado</small></div>
+  </div>
+  <div class="fact">
+    <span class="fact-icon">🕘</span>
+    <div class="fact-label">Horário</div>
+    <div class="fact-value">09h às 21h<small>Check-in 08h30</small></div>
+  </div>
+  <div class="fact">
+    <span class="fact-icon">📍</span>
+    <div class="fact-label">Local</div>
+    <div class="fact-value">Hotel Sagres<small>Salão Atlântico Sul</small></div>
+  </div>
+  <div class="fact">
+    <span class="fact-icon">🎤</span>
+    <div class="fact-label">Formato</div>
+    <div class="fact-value">Sala única<small>Sem sala paralela</small></div>
+  </div>
+</div>
+
+<!-- NUMBERS -->
+<div class="numbers">
+  <div><div class="n">12h</div><div class="l">Imersão</div></div>
+  <div><div class="n">10</div><div class="l">Palestras</div></div>
+  <div><div class="n">4</div><div class="l">Blocos</div></div>
+  <div><div class="n">9</div><div class="l">Convidados</div></div>
+</div>
+
+<!-- ALERTAS -->
+<section class="section">
+  <div class="section-tag">Leia primeiro</div>
+  <h2>Quatro coisas <em>críticas</em>.</h2>
+  <p class="section-lead">Se você ler só uma parte deste manual, que seja esta.</p>
+
+  <div class="alert" style="margin-bottom:10px">
+    <div class="alert-bullet"></div>
+    <div>
+      <div class="alert-title">🪪 Documento com foto obrigatório</div>
+      <div class="alert-text">Check-in a partir das <strong>08h30</strong>. Leve documento oficial com foto (RG, CNH ou passaporte) e o seu <strong>ingresso oficial do evento</strong>. <em>Sem documento, sem credencial.</em></div>
+    </div>
+  </div>
+
+  <div class="alert" style="margin-bottom:10px">
+    <div class="alert-bullet"></div>
+    <div>
+      <div class="alert-title">🚘 Venha de aplicativo</div>
+      <div class="alert-text">O estacionamento do hotel é <strong>rotativo e exclusivo para hóspedes</strong>. O estacionamento público mais próximo fica em outra rua. <em>Nossa recomendação é vir de carro de aplicativo.</em></div>
+    </div>
+  </div>
+
+  <div class="alert" style="margin-bottom:10px">
+    <div class="alert-bullet"></div>
+    <div>
+      <div class="alert-title">🏷️ As marcas ativam em dois momentos</div>
+      <div class="alert-text">Na <strong>Bag Experience</strong>, às 10h50, e no <strong>coffee break</strong> das 17h, na área das marcas. São os dois momentos de contato com os parceiros e de retirada do kit.</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-bullet"></div>
+    <div>
+      <div class="alert-title">🎤 Sala única, fluxo contínuo</div>
+      <div class="alert-text">Não há sala paralela. Das 09h às 21h são <strong>10 palestras em 4 blocos temáticos</strong>, com mesa redonda de encerramento. Você não precisa escolher entre palestras.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRE-CONGRESSO VIP -->
+<section class="section">
+  <div class="vip-block">
+    <div class="vip-eyebrow">★ Exclusivo ingresso VIP</div>
+    <div class="vip-title">Pré-congresso no<br><em>Sesc Ver-o-Peso.</em></div>
+    <p class="vip-desc">Na véspera, quem tem <strong>ingresso VIP</strong> vive um encontro à parte no Sesc Ver-o-Peso, no coração da Belém histórica, antes de o congresso começar.</p>
+    <div class="vip-meta">
+      <div><div class="vv">18h</div><div class="vl">Início</div></div>
+      <div><div class="vv">Sesc</div><div class="vl">Ver-o-Peso</div></div>
+      <div><div class="vv">VIP</div><div class="vl">Só com ingresso</div></div>
+    </div>
+    <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=Sesc+Boulevard+Blvd.+Castilhos+Fran%C3%A7a+522+Campina+Bel%C3%A9m+PA" target="_blank" rel="noopener">🗺️ Blvd. Castilhos França, 522, Campina</a>
+  </div>
+</section>
+
+<!-- PROGRAMACAO -->
+<section class="section" id="programacao">
+  <div class="section-tag">Programação completa</div>
+  <h2>A ordem <em>do dia</em>.</h2>
+  <p class="section-lead">Das 09h às 21h, em sala única e fluxo contínuo. Toque para expandir cada bloco. Programação sujeita a pequenos ajustes.</p>
+
+  <details class="schedule-block" open>
+    <summary class="schedule-head">
+      <div class="schedule-head-left">
+        <div class="schedule-icon">01</div>
+        <div>
+          <div class="schedule-period">Músculo e medicação</div>
+          <div class="schedule-meta">09h00 às 11h20</div>
+        </div>
+      </div>
+      <div class="schedule-toggle"></div>
+    </summary>
+    <div class="schedule-body">
+      <div class="session">
+        <div class="session-time">09h00</div>
+        <div class="session-content">
+          <div class="session-speaker">Brunno Falcão</div>
+          <div class="session-title"><strong>Abertura Oficial</strong></div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">09h10</div>
+        <div class="session-content">
+          <div class="session-speaker">André Eluan</div>
+          <div class="session-title">Estratégias para "driblar" a Resistência Anabólica em pessoas 50+</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">10h00</div>
+        <div class="session-content">
+          <div class="session-speaker">Dra. Giselle Santos</div>
+          <div class="session-title">Análogos de GLP-1 e suplementação: o que esperar</div>
+        </div>
+      </div>
+      <div class="session break">
+        <div class="session-time">10h50</div>
+        <div class="session-content">
+          <div class="session-title">🎁 Bag Experience</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="schedule-block">
+    <summary class="schedule-head">
+      <div class="schedule-head-left">
+        <div class="schedule-icon">02</div>
+        <div>
+          <div class="schedule-period">O que se vê e o que não se mede</div>
+          <div class="schedule-meta">11h20 às 14h30</div>
+        </div>
+      </div>
+      <div class="schedule-toggle"></div>
+    </summary>
+    <div class="schedule-body">
+      <div class="session">
+        <div class="session-time">11h20</div>
+        <div class="session-content">
+          <div class="session-speaker">Dra. Olivia Fernandes</div>
+          <div class="session-title">Alterações estéticas na era dos análogos de GLP-1</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">12h10</div>
+        <div class="session-content">
+          <div class="session-speaker">Dr. Henrique Freire</div>
+          <div class="session-title">Como reduzir os níveis de lipoproteína(a) através da alimentação e suplementação</div>
+        </div>
+      </div>
+      <div class="session break">
+        <div class="session-time">13h00</div>
+        <div class="session-content">
+          <div class="session-title">🍽️ Almoço · até 14h30</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="schedule-block">
+    <summary class="schedule-head">
+      <div class="schedule-head-left">
+        <div class="schedule-icon">03</div>
+        <div>
+          <div class="schedule-period">Do músculo à conduta</div>
+          <div class="schedule-meta">14h30 às 17h30</div>
+        </div>
+      </div>
+      <div class="schedule-toggle"></div>
+    </summary>
+    <div class="schedule-body">
+      <div class="session">
+        <div class="session-time">14h30</div>
+        <div class="session-content">
+          <div class="session-speaker">Dra. Aline Zago</div>
+          <div class="session-title">Músculo e longevidade: da perda de peso à proteção metabólica</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">15h20</div>
+        <div class="session-content">
+          <div class="session-speaker">Dr. Omar de Faria</div>
+          <div class="session-title">Preparo metabólico do atleta usuário de análogos de GLP-1: proteína ou carboidrato?</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">16h10</div>
+        <div class="session-content">
+          <div class="session-speaker">Dra. Adriana Treme</div>
+          <div class="session-title">A melhor medicação é a mais nova? O papel dos padrões alimentares na nova era do tratamento da obesidade</div>
+        </div>
+      </div>
+      <div class="session break">
+        <div class="session-time">17h00</div>
+        <div class="session-content">
+          <div class="session-title">☕ Coffee break · área das marcas</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="schedule-block">
+    <summary class="schedule-head">
+      <div class="schedule-head-left">
+        <div class="schedule-icon">04</div>
+        <div>
+          <div class="schedule-period">Da clínica ao negócio</div>
+          <div class="schedule-meta">17h30 às 21h00</div>
+        </div>
+      </div>
+      <div class="schedule-toggle"></div>
+    </summary>
+    <div class="schedule-body">
+      <div class="session">
+        <div class="session-time">17h30</div>
+        <div class="session-content">
+          <div class="session-speaker">Dr. Victor Prieto</div>
+          <div class="session-title">A clínica que anda sozinha: como sair do consultório solo sem parar de crescer</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">18h20</div>
+        <div class="session-content">
+          <div class="session-speaker">Yasmin Aguiar</div>
+          <div class="session-title">Vendas e a ciência por trás da decisão do paciente</div>
+        </div>
+      </div>
+      <div class="session">
+        <div class="session-time">19h10</div>
+        <div class="session-content">
+          <div class="session-speaker">Brunno Falcão</div>
+          <div class="session-title">A nova audiência</div>
+        </div>
+      </div>
+      <div class="session closing">
+        <div class="session-time">20h00</div>
+        <div class="session-content">
+          <div class="session-speaker">Mesa redonda · até 21h</div>
+          <div class="session-title"><strong>Carreira, Oportunidades e Faturamento</strong><br>Brunno Falcão, Dr. Victor Prieto, Dra. Adriana Treme e Dr. Omar de Faria</div>
+        </div>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ============ BAG EXPERIENCE ============ -->
+<section class="section">
+  <div class="section-tag">★ Experiência exclusiva</div>
+  <h2><em>Bag</em> Experience.</h2>
+  <p class="section-lead">No intervalo da manhã, às 10h50, você retira o seu kit e vive a ativação das marcas parceiras. É o primeiro grande momento de circulação do dia.</p>
+
+  <div class="bag-photos">
+    <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775584356/NB_Balneario_-_Bag_Experience_iodsht.jpg" alt="Bag Experience" loading="lazy">
+    <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775584356/NB_Balneario_-_Bag_Experience_2_bnn1mh.jpg" alt="Bag Experience" loading="lazy">
+    <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775584357/NB_Balneario_-_Bag_Experience_3_jnjydq.jpg" alt="Bag Experience" loading="lazy">
+    <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775584357/NB_Balneario_-_Bag_Experience_4_afcfoc.jpg" alt="Bag Experience" loading="lazy">
+  </div>
+
+  <div class="bag-note">
+    <strong>Como funciona.</strong> A ativação acontece fora do salão, no intervalo entre a palestra da Dra. Giselle Santos e a da Dra. Olivia Fernandes. Vá cedo: o kit é entregue ali e o tempo é curto.
+  </div>
+</section>
+
+<!-- ============ O QUE LEVAR ============ -->
+<section class="section">
+  <div class="section-tag">Antes de sair de casa</div>
+  <h2>O que <em>levar</em>.</h2>
+  <p class="section-lead">Toque em cada item conforme for separando. Seis itens que evitam dor de cabeça em 12 horas de congresso.</p>
+
+  <div class="progress-wrap">
+    <div class="progress-top">
+      <span class="progress-label">Sua mochila</span>
+      <span class="progress-count"><span id="pk-n">0</span> de <span id="pk-t">0</span></span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="pk-fill"></div></div>
+  </div>
+
+  <div class="checklist" id="pack">
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Documento oficial com foto</strong><span>RG, CNH ou passaporte. É o item obrigatório para o check-in.</span></div></div>
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Ingresso oficial do evento</strong><span>Salvo no celular ou impresso.</span></div></div>
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Celular carregado e carregador portátil</strong><span>São 12 horas de evento. Bateria é item estratégico.</span></div></div>
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Bloco de notas ou tablet</strong><span>Conteúdo denso e aplicável. Você vai querer anotar.</span></div></div>
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Garrafa de água</strong><span>Para se manter hidratado durante o dia.</span></div></div>
+    <div class="check-item"><div class="check-icon">✓</div><div class="check-body"><strong>Casaco leve</strong><span>O ar-condicionado do salão é forte.</span></div></div>
+  </div>
+</section>
+
+<!-- COMO CHEGAR -->
+<section class="section">
+  <div class="section-tag">Como chegar</div>
+  <h2>Hotel <em>Sagres</em>.</h2>
+  <p class="section-lead">O congresso acontece no Salão Atlântico Sul, no bairro São Brás. Chegue com tempo para o check-in.</p>
+
+  <div class="locale">
+    <div class="locale-venue">Salão <span class="where">Atlântico Sul</span></div>
+    <div class="locale-addr">
+      <strong>Av. Governador José Malcher, 2927</strong>
+      São Brás · Belém / PA
+    </div>
+    <div class="locale-actions">
+      <a class="btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Hotel+Sagres%2C+Av.+Governador+Jos%C3%A9+Malcher%2C+2927%2C+S%C3%A3o+Br%C3%A1s%2C+Bel%C3%A9m+PA" target="_blank" rel="noopener">🗺️ Abrir no Maps</a>
+      <a class="btn-ghost" href="https://waze.com/ul?q=Hotel%20Sagres%20Av.%20Governador%20Jos%C3%A9%20Malcher%202927%20Bel%C3%A9m" target="_blank" rel="noopener">🚗 Abrir no Waze</a>
+    </div>
+  </div>
+</section>
+
+<!-- ESTACIONAMENTO -->
+<section class="section">
+  <div class="section-tag">Para quem vai de carro</div>
+  <h2>Sobre o <em>estacionamento</em>.</h2>
+  <p class="section-lead">Duas informações para você decidir como vir.</p>
+
+  <div class="rules">
+    <div class="rule">
+      <div class="rule-num">1</div>
+      <div class="rule-text"><strong>O do hotel é só para hóspedes.</strong> O Hotel Sagres tem estacionamento rotativo, mas ele é exclusivo de quem está hospedado.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">2</div>
+      <div class="rule-text"><strong>O público mais próximo fica em outra rua.</strong> Por isso a nossa sugestão é vir de carro de aplicativo, principalmente considerando que o congresso vai até as 21h.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESTAURANTES -->
+<section class="section">
+  <div class="section-tag">No almoço (13h às 14h30)</div>
+  <h2>Onde <em>comer</em> por perto.</h2>
+  <p class="section-lead">Nove opções a poucos minutos a pé do hotel. Toque para abrir no mapa.</p>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+M+Yoshino+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍣</div>
+    <div class="poi-body"><div class="poi-name">M Yoshino <span class="badge">Mais perto</span></div><div class="poi-addr">Japonês</div></div>
+    <div class="poi-dist">2 a 4<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Villa+Plaza+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍴</div>
+    <div class="poi-body"><div class="poi-name">Villa Plaza</div><div class="poi-addr">Brasileiro</div></div>
+    <div class="poi-dist">3 a 5<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Ca%C3%A7arola+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🥘</div>
+    <div class="poi-body"><div class="poi-name">Caçarola</div><div class="poi-addr">Self-service</div></div>
+    <div class="poi-dist">5<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Hakata+restaurante+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍱</div>
+    <div class="poi-body"><div class="poi-name">Hakata</div><div class="poi-addr">Japonês</div></div>
+    <div class="poi-dist">5<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Divinus+Paladar+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍛</div>
+    <div class="poi-body"><div class="poi-name">Divinu's Paladar</div><div class="poi-addr">Comida brasileira</div></div>
+    <div class="poi-dist">5 a 6<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Saboroso+Tempero+restaurante+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍲</div>
+    <div class="poi-body"><div class="poi-name">Saboroso Tempero</div><div class="poi-addr">Comida brasileira</div></div>
+    <div class="poi-dist">5 a 7<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Boi+Novo+Churrascaria+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🥩</div>
+    <div class="poi-body"><div class="poi-name">Boi Novo Churrascaria</div><div class="poi-addr">Carnes e churrasco</div></div>
+    <div class="poi-dist">5 a 7<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Amaz%C3%B4nia+na+Cuia+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🌿</div>
+    <div class="poi-body"><div class="poi-name">Amazônia na Cuia <span class="badge">Paraense</span></div><div class="poi-addr">Comida paraense</div></div>
+    <div class="poi-dist">7<small>min a pé</small></div>
+  </a>
+
+  <a class="poi-card" href="https://www.google.com/maps/search/?api=1&query=Restaurante+Izumo+Bel%C3%A9m+PA" target="_blank" rel="noopener">
+    <div class="poi-icon">🍤</div>
+    <div class="poi-body"><div class="poi-name">Izumo</div><div class="poi-addr">Japonês</div></div>
+    <div class="poi-dist">8<small>min a pé</small></div>
+  </a>
+</section>
+
+<!-- MALEIRO -->
+<section class="section">
+  <div class="section-tag">Veio de viagem</div>
+  <h2>Guarde sua mala no <em>maleiro</em>.</h2>
+  <p class="section-lead">Veio de viagem? Você não precisa carregar mala pelo evento.</p>
+
+  <div class="included">
+    <div class="incl-card">
+      <div class="incl-icon">🧳</div>
+      <div class="incl-title">Maleiro no credenciamento</div>
+      <div class="incl-desc">Procure nossa equipe no credenciamento. Eles guardam sua mala durante todo o evento.</div>
+    </div>
+  </div>
+</section>
+
+<!-- INCLUSO -->
+<section class="section">
+  <div class="section-tag">No seu ingresso</div>
+  <h2>O que está <em>incluso</em>.</h2>
+  <p class="section-lead">Tudo isso já está no valor que você pagou. Use cada item.</p>
+
+  <div class="included">
+    <div class="incl-card">
+      <div class="incl-icon">🎤</div>
+      <div class="incl-title">10 palestras em 4 blocos</div>
+      <div class="incl-desc">Sala única, fluxo contínuo, sem sala paralela. Mesa redonda de encerramento com quatro nomes no palco.</div>
+    </div>
+    <div class="incl-card">
+      <div class="incl-icon">🎁</div>
+      <div class="incl-title">Bag Experience</div>
+      <div class="incl-desc">Às 10h50, ativação das marcas parceiras e retirada do kit.</div>
+    </div>
+    <div class="incl-card">
+      <div class="incl-icon">☕</div>
+      <div class="incl-title">Coffee break</div>
+      <div class="incl-desc">Às 17h, na área das marcas. É onde as melhores conversas acontecem.</div>
+    </div>
+    <div class="incl-card">
+      <div class="incl-icon">🤝</div>
+      <div class="incl-title">Networking</div>
+      <div class="incl-desc">Profissionais do Norte inteiro em ambiente curado. As conexões viram parcerias.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EU VOU -->
+<section class="section">
+  <div class="prize-block">
+    <div class="prize-eyebrow">📸 Poste seu "Eu Vou"</div>
+    <div class="prize-title">Marque o perfil,<br><em>concorra a prêmios.</em></div>
+    <a class="prize-handle" href="https://www.instagram.com/nutricaobrasiloficial" target="_blank" rel="noopener">
+      <span class="at">@</span>nutricaobrasiloficial
+    </a>
+    <p class="prize-desc">Acesse o template, coloque sua foto e publique nos stories ou no feed marcando <strong>@nutricaobrasiloficial</strong> com a hashtag <strong>#NutriçãoBrasil</strong>. Quem postar concorre a produtos exclusivos dos patrocinadores.</p>
+    <a class="btn-solid" href="https://canva.link/u6g882437916m87" target="_blank" rel="noopener">Criar meu "Eu Vou" →</a>
+  </div>
+</section>
+
+<!-- FOTOS -->
+<section class="section">
+  <div class="section-tag">Fotos, stories e prêmios</div>
+  <h2>Cada post é <em>uma chance</em>.</h2>
+  <p class="section-lead">As fotos oficiais do evento serão registradas pela Banlek e divulgadas nos dias seguintes. Mas durante o dia, queremos ver você postando também.</p>
+
+  <div class="included">
+    <div class="incl-card">
+      <div class="incl-icon">🎁</div>
+      <div class="incl-title">Poste e concorra</div>
+      <div class="incl-desc">Publique fotos e stories marcando <strong style="color:var(--nude)">@nutricaobrasiloficial</strong> com a hashtag <strong style="color:var(--nude)">#NutriçãoBrasil</strong>. Cada marcação é uma chance de concorrer a produtos exclusivos dos nossos patrocinadores. Quanto mais você postar, mais chances de levar algo para casa.</div>
+    </div>
+  </div>
+
+  <a class="btn-outline" href="https://banlek.com/album/266c54" target="_blank" rel="noopener">📸 Ver fotos oficiais (Banlek)</a>
+</section>
+
+<!-- RECOMENDACOES -->
+<section class="section">
+  <div class="section-tag">Recomendações</div>
+  <h2>Para viver o <em>melhor</em> do dia.</h2>
+
+  <div class="rules">
+    <div class="rule">
+      <div class="rule-num">1</div>
+      <div class="rule-text"><strong>Chegue às 08h30.</strong> O check-in abre meia hora antes. Quem chega cedo escolhe lugar e faz networking sem pressa.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">2</div>
+      <div class="rule-text"><strong>Volte do almoço com folga.</strong> O intervalo vai até 14h30 e os acessos podem ser controlados após o início de cada palestra.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">3</div>
+      <div class="rule-text"><strong>Aproveite a Bag Experience e o coffee.</strong> São os dois momentos de encontro com as marcas parceiras e com os colegas.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">4</div>
+      <div class="rule-text"><strong>Não tem transmissão.</strong> O evento é 100% presencial. Não haverá gravação nem live, então o que acontece no salão fica só para quem está lá.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">5</div>
+      <div class="rule-text"><strong>Fique até a mesa redonda.</strong> Às 20h, quatro nomes no palco falando de carreira, oportunidades e faturamento. É o fechamento do dia.</div>
+    </div>
+    <div class="rule">
+      <div class="rule-num">6</div>
+      <div class="rule-text"><strong>Poste marcando o perfil.</strong> Use <strong>@nutricaobrasiloficial</strong> e <strong>#NutriçãoBrasil</strong> e concorra a produtos dos patrocinadores.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="section">
+  <div class="contact-card">
+    <div class="contact-eyebrow">Suporte direto</div>
+    <div class="contact-title">Alguma dúvida<br>antes do dia 19?</div>
+    <p class="contact-sub">Nossa equipe responde no WhatsApp: ingresso, acesso, credenciamento e dúvidas operacionais.</p>
+    <a class="contact-btn" href="https://wa.me/5561998318817?text=Ol%C3%A1!%20Sou%20congressista%20do%20Nutri%C3%A7%C3%A3o%20Brasil%20Bel%C3%A9m%20e%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12.1 0 5.5 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.3zM12.1 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.6-3.5-1.6-5.4 0-5.5 4.5-10 10.1-10 2.7 0 5.2 1.1 7.1 3 1.9 1.9 2.9 4.4 2.9 7.1.1 5.4-4.4 10-10 10z"/><path d="M17.6 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.6-.9-2.2-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+      Falar com a equipe
+    </a>
+    <div class="contact-phone">
+      <span class="contact-phone-label">WhatsApp oficial</span>
+      <a href="https://wa.me/5561998318817" class="contact-phone-num">61 99831-8817</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARTILHE -->
+<section class="section">
+  <div class="share-block">
+    <div class="share-title">Tem colega que vai junto?</div>
+    <p class="share-sub">Compartilhe este manual com quem vai estar em Belém no sábado. Todo mundo chega mais preparado.</p>
+    <a class="contact-btn" href="https://wa.me/?text=Manual%20do%20Congressista%20do%20Nutri%C3%A7%C3%A3o%20Brasil%20Bel%C3%A9m%202026.%20Programa%C3%A7%C3%A3o%2C%20endere%C3%A7o%2C%20restaurantes%20e%20tudo%20que%20voc%C3%AA%20precisa%20saber%3A%20https%3A%2F%2Fwww.nutricaobrasil.com.br%2Fmanual-belem" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12.1 0 5.5 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.3zM12.1 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.6-3.5-1.6-5.4 0-5.5 4.5-10 10.1-10 2.7 0 5.2 1.1 7.1 3 1.9 1.9 2.9 4.4 2.9 7.1.1 5.4-4.4 10-10 10z"/><path d="M17.6 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.6-.9-2.2-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+      Compartilhar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1776336705/Logo_SP_negativa_izuzur.png" alt="Science Play">
+  <div class="footer-text">
+    <strong>Nutrição Brasil® · Realização Science Play</strong>
+    Science Play Cursos LTDA · CNPJ 33.612.911/0001-29<br>
+    Manual do Congressista · Edição Belém 2026<br><a href="/belem" style="color:#80c0ff;text-decoration:underline;text-underline-offset:3px">Ver a página do evento</a>
+  </div>
+</footer>
+
+</div>
+
+<div class="sticky-cta">
+  <div class="sticky-cta-text">
+    <strong>Precisa de ajuda?</strong>
+    <span>Resposta em minutos</span>
+  </div>
+  <a class="sticky-cta-btn" href="https://wa.me/5561998318817?text=Ol%C3%A1!%20Sou%20congressista%20do%20Nutri%C3%A7%C3%A3o%20Brasil%20Bel%C3%A9m%20e%20tenho%20uma%20d%C3%BAvida" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.3 1.3 15.3 0 12.1 0 5.5 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.3zM12.1 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.6-3.5-1.6-5.4 0-5.5 4.5-10 10.1-10 2.7 0 5.2 1.1 7.1 3 1.9 1.9 2.9 4.4 2.9 7.1.1 5.4-4.4 10-10 10z"/><path d="M17.6 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.6-.9-2.2-.2-.6-.5-.5-.6-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.3 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  /* COUNTDOWN para 19/09/2026 08h30 (horario de Brasilia) */
+  var alvo = Date.UTC(2026,8,19,11,30,0);
+  function tick(){
+    var d = alvo - Date.now();
+    var note = document.getElementById('cd-note');
+    if(d <= 0){
+      ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){
+        var e=document.getElementById(id); if(e) e.textContent='0';
+      });
+      if(note) note.textContent='O credenciamento já está aberto';
+      return;
+    }
+    var s = Math.floor(d/1000);
+    document.getElementById('cd-d').textContent = Math.floor(s/86400);
+    document.getElementById('cd-h').textContent = Math.floor(s%86400/3600);
+    document.getElementById('cd-m').textContent = Math.floor(s%3600/60);
+    document.getElementById('cd-s').textContent = s%60;
+  }
+  tick(); setInterval(tick,1000);
+
+  /* CHECKLIST INTERATIVO */
+  var items = document.querySelectorAll('#pack .check-item');
+  var fill = document.getElementById('pk-fill');
+  var nEl = document.getElementById('pk-n');
+  var tEl = document.getElementById('pk-t');
+  if(items.length && fill && nEl && tEl){
+    tEl.textContent = items.length;
+    var upd = function(){
+      var n = document.querySelectorAll('#pack .check-item.on').length;
+      nEl.textContent = n;
+      fill.style.width = (n/items.length*100) + '%';
+    };
+    items.forEach(function(i){
+      i.addEventListener('click', function(){ i.classList.toggle('on'); upd(); });
+    });
+    upd();
+  }
+})();
+</script>
+
+</body>
+</html>
