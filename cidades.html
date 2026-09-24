@@ -88,23 +88,34 @@ header nav a{white-space:nowrap!important;padding:8px 0!important;font-size:13px
 [style*="padding:34px 40px"]{padding:26px 22px!important}
 }
 </style>
+<script>window.nbLead=function(form,identificador,extra){
+var d=extra||{};var nome=(d.nome||"").trim(),email=(d.email||"").trim();
+if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))return false;
+var base={token_rdstation:"0d0a7a2c54867e2123724757fbd2280d",identificador:identificador,email:email,nome:nome,
+telefone:d.telefone||"",cf_cidade_interesse:d.cidade||"",cf_origem:"site-nutricaobrasil",cf_pagina:location.pathname};
+try{if(window.RdIntegration&&RdIntegration.post){RdIntegration.post(base);}else{
+fetch("https://api.rd.services/platform/events",{method:"POST",headers:{"Content-Type":"application/json"},
+body:JSON.stringify({event_type:"CONVERSION",event_family:"CDP",payload:{conversion_identifier:identificador,
+email:email,name:nome||undefined,mobile_phone:d.telefone||undefined,cf_cidade_interesse:d.cidade||undefined,
+cf_origem:"site-nutricaobrasil",cf_pagina:location.pathname}})}).catch(function(){});}}catch(e){}
+try{gtag("event","generate_lead",{identificador:identificador,city:d.cidade||""});}catch(e){}
+try{fbq("track","Lead",{content_name:identificador,city:d.cidade||""});}catch(e){}
+return true;};</script>
 </head>
 <body>
 <!-- TOPBAR -->
-<header style="position:sticky;top:0;z-index:50;background:rgba(13,6,24,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #3a2a52">
-  <div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px">
-    <a href="/" style="display:flex;align-items:center"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:28px;display:block"></a>
-    <nav style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
-      <a href="/programacao" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx1">Programação</a>
-      <a href="/ingressos" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx2">Ingressos</a>
-      <a href="/corrida" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx3">NB Run</a>
-      <a href="/expo" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx4">Expo</a>
-      <a href="/expositores" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx5">Seja expositor</a>
-      <a href="/cidades" style="color:#c9bcde;font-size:13.5px;font-weight:600" class="sx6">Cidades</a>
-    </nav>
-    <a href="/ingressos" style="background:#5ab78e;color:#07130d;font-weight:800;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;padding:12px 22px;border-radius:12px;white-space:nowrap" class="sx7">Garantir vaga</a>
-  </div>
-</header>
+<header style="position:sticky;top:0;z-index:60;background:rgba(13,6,24,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #3a2a52">
+<div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px">
+<a href="/" style="display:flex;align-items:center;gap:12px" aria-label="Nutrição Brasil, ir para a home"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:28px;display:block" width="150" height="28"></a>
+<nav aria-label="Principal" style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+<a href="/goiania" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Goiânia</a>
+<a href="/portoalegre" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Porto Alegre</a>
+<a href="/2027" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">2027</a>
+<a href="/o-que-e" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">O que é</a>
+<a href="/noticias" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Notícias</a>
+</nav>
+<a href="/#proximas" style="background:#8b5fbf;color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;padding:12px 22px;border-radius:12px;white-space:nowrap;text-decoration:none">Escolher cidade</a>
+</div></header>
 
 <!-- HERO -->
 <section style="position:relative;overflow:hidden;border-bottom:1px solid #3a2a52">
@@ -198,31 +209,22 @@ header nav a{white-space:nowrap!important;padding:8px 0!important;font-size:13px
 </section>
 
 <!-- FOOTER -->
-<footer style="background:#0d0618;border-top:1px solid #3a2a52;padding:56px 24px 40px;text-align:center">
-  <div style="max-width:1180px;margin:0 auto">
-    <div style="display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:24px">
-      <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:28px">
-      <span style="width:1px;height:22px;background:#3a2a52"></span>
-      <img loading="lazy" decoding="async" src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1776336705/Logo_SP_negativa_izuzur.png" alt="Science Play" style="height:26px;opacity:.85">
-    </div>
-    <nav style="display:flex;justify-content:center;gap:12px 26px;flex-wrap:wrap;margin-bottom:24px">
-      <a href="/ingressos" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx31">Ingressos</a>
-      <a href="/corrida" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx32">NB Run</a>
-      <a href="/expo" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx33">Expo</a>
-      <a href="/visitante" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx34">Visitante</a>
-      <a href="/programacao" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx35">Programação</a>
-      <a href="/expositores" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx36">Seja expositor</a>
-      <a href="/noticias" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx37">Notícias</a>
-      <a href="/hall-da-fama" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx38">Hall da Fama</a>
-      <a href="/golden" style="color:#8a7aa5;font-size:13px;font-weight:600" class="sx39">Golden</a>
-    </nav>
-    <div style="display:flex;justify-content:center;gap:18px;margin-bottom:22px">
-      <a href="https://www.instagram.com/nutricaobrasiloficial" target="_blank" rel="noopener" style="color:#c9bcde;font-size:13px;font-weight:600" class="sx40">@nutricaobrasiloficial</a>
-      <a href="https://wa.me/5561998318817" target="_blank" rel="noopener" style="color:#c9bcde;font-size:13px;font-weight:600" class="sx41">WhatsApp</a>
-    </div>
-    <p style="margin:0;color:#8a7aa5;font-size:12px;line-height:1.8;opacity:.7">Nutrição Brasil 2026 · Brasília · Belém · Goiânia · Porto Alegre<br>Realização Science Play Cursos Ltda · CNPJ 33.612.911/0001-29<br>© 2026 Nutrição Brasil. Todos os direitos reservados.</p>
-  </div>
-</footer>
+<footer style="background:#0d0618;border-top:1px solid #3a2a52">
+<div style="max-width:1180px;margin:0 auto;padding:52px 24px 30px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:34px 24px">
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Imersões 2026</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/goiania" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Goiânia · 7 de novembro</a></li><li style="margin-bottom:9px"><a href="/portoalegre" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Porto Alegre · 14 de novembro</a></li><li style="margin-bottom:9px"><a href="/belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Belém · realizada</a></li><li style="margin-bottom:9px"><a href="/cidades" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Todas as cidades</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Calendário 2027</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">As 8 edições de 2027</a></li><li style="margin-bottom:9px"><a href="/2027#lista" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Lista de espera</a></li><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Congresso Brasília</a></li><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Rio de Janeiro e Curitiba</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">O evento</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/o-que-e" style="color:#c9bcde;font-size:13.5px;text-decoration:none">O que é o Nutrição Brasil</a></li><li style="margin-bottom:9px"><a href="/hall-da-fama" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Hall da Fama</a></li><li style="margin-bottom:9px"><a href="/expositores" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Seja expositor</a></li><li style="margin-bottom:9px"><a href="/manual-belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Manual do congressista</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Conteúdo</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/noticias" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Central de notícias</a></li><li style="margin-bottom:9px"><a href="/noticias/brasilia" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Notícias de Brasília</a></li><li style="margin-bottom:9px"><a href="/noticias/belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Notícias de Belém</a></li><li style="margin-bottom:9px"><a href="/noticias/imprensa" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Sala de imprensa</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Institucional</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="https://scienceplay.com.br" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Science Play</a></li><li style="margin-bottom:9px"><a href="/privacidade" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Política de privacidade</a></li><li style="margin-bottom:9px"><a href="https://www.instagram.com/nutricaobrasiloficial" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Instagram</a></li><li style="margin-bottom:9px"><a href="https://wa.me/5561998318817" style="color:#c9bcde;font-size:13.5px;text-decoration:none">WhatsApp oficial</a></li></ul></div>
+</div>
+<div style="margin-top:38px;padding-top:22px;border-top:1px solid #3a2a52;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+<img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:24px;display:block" width="130" height="24">
+<p style="margin:0;color:#8a7aa5;font-size:12px;line-height:1.7;text-align:right">
+Nutrição Brasil · o maior evento de nutrição do Brasil, desde 2014<br>
+Realização Science Play Cursos Ltda · CNPJ 33.612.911/0001-29<br>
+© 2026 Nutrição Brasil. Todos os direitos reservados.</p>
+</div></div></footer>
 <script>function track_checkout(origin){try{fbq('track','InitiateCheckout',{content_name:origin});gtag('event','begin_checkout',{origin:origin})}catch(e){}}</script>
 
 </body>

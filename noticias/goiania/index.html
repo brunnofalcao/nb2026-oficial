@@ -96,7 +96,8 @@ footer{background:#120a20;color:#a99cc0;padding:50px 0 36px;font-size:13px;text-
 footer a{color:#cfc6dd;text-decoration:none;margin:0 10px}
 footer .f-links{margin:16px 0 20px}
 footer .fine{font-size:12px;line-height:1.8;color:#7d7292}
-@media(max-width:760px){.nav-links{display:none}.art-head{padding:52px 0 44px}.art-head.has-featured{padding-bottom:120px}.featured{margin-top:-90px}article.body{font-size:16.5px;padding-top:44px}.art-head .sub{font-size:16px}}</style>
+@media(max-width:760px){.nav-links{display:none}.art-head{padding:52px 0 44px}.art-head.has-featured{padding-bottom:120px}.featured{margin-top:-90px}article.body{font-size:16.5px;padding-top:44px}.art-head .sub{font-size:16px}}@media(max-width:860px){html,body{overflow-x:hidden}header>div{flex-wrap:wrap!important;row-gap:8px!important;padding:12px 16px!important}header nav{order:3!important;width:100%!important;flex-wrap:nowrap!important;justify-content:flex-start!important;gap:20px!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}footer p{text-align:left!important}}@keyframes nbPulse{0%,100%{opacity:1}50%{opacity:.35}}
+</style>
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Y2HLCV0V0"></script>
@@ -108,17 +109,33 @@ footer .fine{font-size:12px;line-height:1.8;color:#7d7292}
 <!-- RD Station -->
 <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/02414940-c939-4c7b-8397-f531c8640a72-loader.js"></script>
 
+<script>window.nbLead=function(form,identificador,extra){
+var d=extra||{};var nome=(d.nome||"").trim(),email=(d.email||"").trim();
+if(!email||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))return false;
+var base={token_rdstation:"0d0a7a2c54867e2123724757fbd2280d",identificador:identificador,email:email,nome:nome,
+telefone:d.telefone||"",cf_cidade_interesse:d.cidade||"",cf_origem:"site-nutricaobrasil",cf_pagina:location.pathname};
+try{if(window.RdIntegration&&RdIntegration.post){RdIntegration.post(base);}else{
+fetch("https://api.rd.services/platform/events",{method:"POST",headers:{"Content-Type":"application/json"},
+body:JSON.stringify({event_type:"CONVERSION",event_family:"CDP",payload:{conversion_identifier:identificador,
+email:email,name:nome||undefined,mobile_phone:d.telefone||undefined,cf_cidade_interesse:d.cidade||undefined,
+cf_origem:"site-nutricaobrasil",cf_pagina:location.pathname}})}).catch(function(){});}}catch(e){}
+try{gtag("event","generate_lead",{identificador:identificador,city:d.cidade||""});}catch(e){}
+try{fbq("track","Lead",{content_name:identificador,city:d.cidade||""});}catch(e){}
+return true;};</script>
 </head>
 <body>
-<nav class="nav"><div class="nav-in">
-<a href="/"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil"></a>
-<div class="nav-links">
-<a href="/noticias">Notícias</a>
-<a href="/programacao">Programação</a>
-<a href="/cidades">Cidades</a><a href="/expo">Expo</a>
-<a href="/noticias/imprensa">Imprensa</a>
-<a class="nav-cta" href="/ingressos">Garantir vaga</a>
-</div></div></nav><div class="hub-hero"><div class="container">
+<header style="position:sticky;top:0;z-index:60;background:rgba(13,6,24,.9);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #3a2a52">
+<div style="max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px">
+<a href="/" style="display:flex;align-items:center;gap:12px" aria-label="Nutrição Brasil, ir para a home"><img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:28px;display:block" width="150" height="28"></a>
+<nav aria-label="Principal" style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+<a href="/goiania" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Goiânia</a>
+<a href="/portoalegre" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Porto Alegre</a>
+<a href="/2027" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">2027</a>
+<a href="/o-que-e" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">O que é</a>
+<a href="/noticias" style="color:#c9bcde;font-size:13.5px;font-weight:600;text-decoration:none">Notícias</a>
+</nav>
+<a href="/#proximas" style="background:#8b5fbf;color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;padding:12px 22px;border-radius:12px;white-space:nowrap;text-decoration:none">Escolher cidade</a>
+</div></header><div class="hub-hero"><div class="container">
 <span class="section-label" style="color:var(--blue)"><span class="line" style="background:var(--blue)"></span>Nutrição Brasil · Goiânia</span>
 <h1>Notícias de <em>Goiânia</em></h1>
 <p>Notícias da edição Goiânia do Nutrição Brasil: 7 de novembro de 2026, no Castro’s Park Hotel.</p>
@@ -128,8 +145,19 @@ footer .fine{font-size:12px;line-height:1.8;color:#7d7292}
 <img src="/assets/noticias/imersao-nb-parceiros.jpg" alt="Nutrição Brasil confirma edições em Goiânia e Porto Alegre em novembro de 2026" loading="lazy">
 <div class="card-b"><span class="card-meta">📍 Nacional · Agenda 2026</span>
 <h3>Nutrição Brasil confirma edições em Goiânia e Porto Alegre em novembro de 2026</h3><p>Depois de Brasília e Belém, evento fecha o calendário do ano no Centro-Oeste e no Sul, com listas de espera já abertas.…</p>
-<time datetime="2026-07-10T11:30:00-03:00">10 de julho de 2026, 11h30</time></div></a></div></div><footer><div class="container">
-<img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:26px;margin:0 auto 6px">
-<div class="f-links"><a href="/">Home</a><a href="/noticias">Notícias</a><a href="/ingressos">Ingressos</a><a href="/programacao">Programação</a><a href="/cidades">Cidades</a><a href="/expo">Expo</a><a href="/noticias/imprensa">Imprensa</a></div>
-<p class="fine">Nutrição Brasil 2026 · Centro de Convenções Ulysses Guimarães, Brasília/DF<br>Realização Science Play Cursos Ltda · CNPJ 33.612.911/0001-29<br>© 2026 Nutrição Brasil. Todos os direitos reservados.</p>
-</div></footer></body></html>
+<time datetime="2026-07-10T11:30:00-03:00">10 de julho de 2026, 11h30</time></div></a></div></div><footer style="background:#0d0618;border-top:1px solid #3a2a52">
+<div style="max-width:1180px;margin:0 auto;padding:52px 24px 30px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:34px 24px">
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Imersões 2026</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/goiania" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Goiânia · 7 de novembro</a></li><li style="margin-bottom:9px"><a href="/portoalegre" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Porto Alegre · 14 de novembro</a></li><li style="margin-bottom:9px"><a href="/belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Belém · realizada</a></li><li style="margin-bottom:9px"><a href="/cidades" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Todas as cidades</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Calendário 2027</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">As 8 edições de 2027</a></li><li style="margin-bottom:9px"><a href="/2027#lista" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Lista de espera</a></li><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Congresso Brasília</a></li><li style="margin-bottom:9px"><a href="/2027" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Rio de Janeiro e Curitiba</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">O evento</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/o-que-e" style="color:#c9bcde;font-size:13.5px;text-decoration:none">O que é o Nutrição Brasil</a></li><li style="margin-bottom:9px"><a href="/hall-da-fama" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Hall da Fama</a></li><li style="margin-bottom:9px"><a href="/expositores" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Seja expositor</a></li><li style="margin-bottom:9px"><a href="/manual-belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Manual do congressista</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Conteúdo</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="/noticias" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Central de notícias</a></li><li style="margin-bottom:9px"><a href="/noticias/brasilia" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Notícias de Brasília</a></li><li style="margin-bottom:9px"><a href="/noticias/belem" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Notícias de Belém</a></li><li style="margin-bottom:9px"><a href="/noticias/imprensa" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Sala de imprensa</a></li></ul></div>
+<div><div style="color:#80c0ff;font:800 10.5px/1 Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">Institucional</div><ul style="list-style:none;margin:0;padding:0"><li style="margin-bottom:9px"><a href="https://scienceplay.com.br" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Science Play</a></li><li style="margin-bottom:9px"><a href="/privacidade" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Política de privacidade</a></li><li style="margin-bottom:9px"><a href="https://www.instagram.com/nutricaobrasiloficial" style="color:#c9bcde;font-size:13.5px;text-decoration:none">Instagram</a></li><li style="margin-bottom:9px"><a href="https://wa.me/5561998318817" style="color:#c9bcde;font-size:13.5px;text-decoration:none">WhatsApp oficial</a></li></ul></div>
+</div>
+<div style="margin-top:38px;padding-top:22px;border-top:1px solid #3a2a52;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+<img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1782001627/Logo_NB_-_header_footer_kjwhyr.svg" alt="Nutrição Brasil" style="height:24px;display:block" width="130" height="24">
+<p style="margin:0;color:#8a7aa5;font-size:12px;line-height:1.7;text-align:right">
+Nutrição Brasil · o maior evento de nutrição do Brasil, desde 2014<br>
+Realização Science Play Cursos Ltda · CNPJ 33.612.911/0001-29<br>
+© 2026 Nutrição Brasil. Todos os direitos reservados.</p>
+</div></div></footer></body></html>
